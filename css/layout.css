@@ -1666,6 +1666,10 @@ footer .social-links li:first-child { margin-left: 0; }
 .quotecolumn{
  text-align: center;
 }
+.libquotecolumn{
+ text-align: center;
+ border-right: solid #0B686B;
+}
 
 header.mobile-static{
  position: absolute !important;
