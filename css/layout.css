@@ -53,6 +53,14 @@ properly.
    margin: 0;
    padding: 0;
 }
+.lib-flexslider {
+   position: relative;
+   zoom: 1;
+   margin: 0;
+   padding: 0;
+   background: url(https://www.bahai.org/chrome/img/library/home-image-archives.jpg?e389b681) center no-repeat;
+   height: 450px;
+}
 .flexslider .slides { zoom: 1; }
 .flexslider .slides > li { position: relative; }
 
@@ -120,7 +128,20 @@ header .logo a {
 	border: none;
 	outline: none;
 }
-
+.intro-head{
+   background: #25292D;
+   height: 80px;
+   width: 96%;
+    max-width: 1024px;
+    margin: 0 auto;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.intro-head h2{
+   color:#0f9095;
+}
 /* nav-wrap */
 #nav-wrap {
 	position: relative;
@@ -181,6 +202,11 @@ ul#nav li.active a { color: #11ABB0; }
 
 #intro {
    background: #111 url(../images/intro-bg.jpg) no-repeat center;
+   overflow: hidden;
+   margin-top: 55px;
+}
+#libintro {
+   background: #111 url(../images/patterns/grey.png) center ;
    overflow: hidden;
    margin-top: 55px;
 }
@@ -313,6 +339,7 @@ ul#nav li.active a { color: #11ABB0; }
 #portfolio .section-head h2 { /*color: #0f9095;*/ color:#323233;}
 #portfolio .section-head p.desc { color: #999999; }
 #portfolio .section-head .intro { /*color: #A3A3A3; color:#565658;*/ color: #333233}
+#portfolio .section-head .libintro a { /*color: #A3A3A3; color:#565658;*/ color: #333233}
 
 /* Portfolio Content */
 #portfolio-wrapper { margin-top: 36px; }
@@ -1377,6 +1404,16 @@ footer .social-links li:first-child { margin-left: 0; }
    .slides {
       overflow: hidden;
       min-height: 300px;
+   }
+   .intro-head {
+      overflow: hidden;
+      width: auto;
+   }
+   .intro-head h2{
+      font-size: 25px;
+   }
+   .lib-flexslider{
+      height:300px;
    }
 
    /* portfolio section
