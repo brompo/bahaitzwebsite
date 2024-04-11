@@ -1717,42 +1717,98 @@ header.mobile-static{
 /* Library Tabel
 
 /* ================================================================== */
-#portfolio .listingtable{
-   padding:40px 0 0 0;
+/* Common styles */
+#portfolio .listingtable {
+   padding: 40px 0 0 0;
 }
 
-#portfolio .listingtable table{
+#portfolio .listingtable table {
    clear: both;
-    border: 1px solid #dfdcd8;
-    font-size: 1.4rem;
-    line-height: 120%;
-    width: 100%;
-    border-collapse: separate;
-    table-layout: fixed;
+   border: 1px solid #dfdcd8;
+   font-size: 1.4rem;
+   line-height: 120%;
+   width: 100%;
+   border-collapse: separate;
+   table-layout: fixed;
 }
-#portfolio .listingtable table th{
+
+#portfolio .listingtable table th {
    position: relative;
    border-color: #fff;
    background: #efefef;
    padding-top: 10px;
    padding-bottom: 7px;
+   color: #0f9095;
 }
+
 table tr td {
    border-top: 2px solid #fff;
    vertical-align: top;
 }
+
 td, th {
    padding: 4px 10px 4px 5px;
    text-align: left;
    border-bottom: 1px solid #ddd;
-
 }
+
 th {
    font-weight: 700;
    background-color: #f2f2f2;
 }
-tr:hover{
+
+tr:hover {
    background-color: #f5f5f5;
+}
+
+/* Media queries for smaller screens */
+@media only screen and (max-width: 768px) {
+   #portfolio .listingtable table,
+   #portfolio .listingtable thead,
+   #portfolio .listingtable tbody,
+   #portfolio .listingtable th,
+   #portfolio .listingtable td,
+   #portfolio .listingtable tr {
+       display: block;
+   }
+
+   #portfolio .listingtable thead tr {
+       position: absolute;
+       top: -9999px;
+       left: -9999px;
+   }
+
+   #portfolio .listingtable tr {
+       margin-bottom: 20px;
+       border: 1px solid #ccc;
+   }
+
+   #portfolio .listingtable td {
+       border: none;
+       position: relative;
+       /* padding-left: 50%; */
+   }
+
+   #portfolio .listingtable td:before {
+       position: absolute;
+       top: 6px;
+       left: 6px;
+       width: 45%;
+       padding-right: 10px;
+       white-space: nowrap;
+   }
+
+   /* #portfolio .listingtable td:nth-of-type(1):before {
+       content: "Dated: ";
+   }
+
+   #portfolio .listingtable td:nth-of-type(2):before {
+       content: "Adressed to: ";
+   } */
+
+   #portfolio .listingtable td:nth-of-type(3):before {
+       content: "Summary of Content: ";
+   }
 }
 
 caption, td, th {
