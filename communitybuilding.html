@@ -12,15 +12,19 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<!-- Mobile Specific Metas
-	================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- CSS
-	================================================== -->
-	<link rel="stylesheet" href="css/base.css">
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/layout.css">
 
+	<!-- Adding Bootstrap 13 Apr 2024:Brian-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	
 	<!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -34,150 +38,159 @@
 
 <body class="full">
 
-	<!-- Header
-	================================================== -->
-	<header id="top" class="mobile mobile-static">
+	   <!-- Header
+   ================================================== -->
+   <header class="mobile mobile-static">
 
+	<div class="container">
 		<div class="row">
-
-			<div class="col full">
-
-				<div class="logo">
+				<div class="col-6 logo">
 					<a href="index.html"><img alt="" src="images/logo.png"></a>
 				</div>
-
-				<nav id="nav-wrap">
-
-					<a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-					<a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
-
-					<ul id="nav" class="nav">
-						<li><a href="index.html" >Mwanzo</a></li>
-						<li><a href="purposeofourlives.html">Kusudi la Maisha Yetu</a></li>
-						<li class="active"><a href="communitybuilding.html">Kujenga Jumuiya</a></li>
-						<li><a href="familylife.html">Maisha ya Familia</a></li>
-						<li><a href="scienceandreligion.html">Sayansi na Dini</a></li>
-						<li><a href="./library">Reference Library</a></li>
+				<div class="col-4 library">
+					<ul>
+						<li>
+							<img class="libraryimage" src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNy44MiAyNy44MiI+PGRlZnM+PHN0eWxlPi5jbHMtMSB7b3BhY2l0eTogMC45O30uY2xzLTIge29wYWNpdHk6IDAuNjt9LmNscy0zIHtvcGFjaXR5OiAwLjM7fS5jbHMtMSwuY2xzLTIsLmNscy0zIHtmaWxsOiAjM2UzOTM4O2lzb2xhdGlvbjogaXNvbGF0ZTt9PC9zdHlsZT48L2RlZnM+PGcgaWQ9IklDTl9BbGxfU2l0ZXNfIiBkYXRhLW5hbWU9IklDTiBBbGwgU2l0ZXMgIj48cmVjdCBpZD0iUmVjaHRlY2tfMTAxMSIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDExIiBjbGFzcz0iY2xzLTEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTIiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxMiIgY2xhc3M9ImNscy0xIiB4PSIxMC4wOSIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxMyIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDEzIiBjbGFzcz0iY2xzLTEiIHg9IjIwLjE3IiB3aWR0aD0iNy44NCIgaGVpZ2h0PSI3Ljc5IiAvPjxyZWN0IGlkPSJSZWNodGVja18xMDE0IiBkYXRhLW5hbWU9IlJlY2h0ZWNrIDEwMTQiIGNsYXNzPSJjbHMtMiIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTUiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNSIgY2xhc3M9ImNscy0xIiB4PSIxMC4wOSIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTYiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNiIgY2xhc3M9ImNscy0yIiB4PSIyMC4xNyIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTciIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNyIgY2xhc3M9ImNscy0zIiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxOCIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDE4IiBjbGFzcz0iY2xzLTMiIHg9IjEwLjA5IiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxOSIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDE5IiBjbGFzcz0iY2xzLTMiIHg9IjIwLjE3IiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48L2c+PC9zdmc+">
+							<a class="librarylink" href="./library">
+								Library
+						</a></li>
 					</ul>
+				</div>
+				<div class="col-2">
+					<nav id="nav-wrap">
 
-				</nav>
+						<a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+						<a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
 
+						<ul id="nav" class="nav">
+
+							<li class="active"><a href="index.html" >Mwanzoni</a></li>
+							<li><a href="purposeofourlives.html">Kusudi la Maisha Yetu</a></li>
+							<li><a href="communitybuilding.html">Kujenga Jumuiya</a></li>
+							<li><a href="familylife.html">Maisha ya Familia</a></li>
+							<li><a href="scienceandreligion.html">Sayansi na Dini</a></li>
+							
+						</ul>
+					</nav>
 			</div>
-
 		</div>
+	</div>
 
-	</header> <!-- Header End -->
+</header> <!-- Header End -->
 
 	<!-- Post
 	================================================== -->
 	<article class="post">
-
-		<div class="row">
-
-			<div class="col post-image">
-				<img src="images/post-image/post-community-building.jpg" alt="post-image" title="post-image">
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col">
-				<h2>Kujenga Jumuiya</h2>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col g-8 post-content">
-
-				<p class="intro">
-Wa-Bahá'í wanajitahidi kujiweka sambamba na michakato inayojenga ambayo inahabarishwa na umoja huu wa kimsingi wa jamii ya wanadamu, dini, na Mungu, na kutembea pamoja juu ya njia ya utumishi.
-</p>
-
-				<p class="intro">WaBahá’í wanatoka matabaka yote ya jamii. Vijana na
-wazee, wanaume na wanawake kadhalika, wanaishi
-kando la wengine wa kila nchi na wanakuwa wa kila taifa. Wanashiriki lengo la pamoja la kuhudumia binadamu na kuboresha maisha yao ya ndani kufuatana na mafundisho ya Bahá’u’lláh. Jumuiya ambayo ni kwao ni moja ya kujifunza na kutenda, huru kutoka hisia yoyote ya kiburi au madai ya kuwa na uelewa wa pekee wa ukweli. Ni jumuiya inayojitahidi kukuza matumaini kwa wakati ujao wa binadamu, kuendeleza jitihada zenye madhumuni, na kusherehekea juhudi za wale wote ulimwenguni wanaofanya kazi kujenga umoja na kutuliza
-mateso ya kibinadamu.
-</p>
-
-				<p class="intro">Bahá’u’lláh aliwashauri wafuasi Wake: <span class="paragraph-bold">“Muwe wenye
-wasiwasi sana kuhusu mahitaji ya zama ambamo
-mnaishi, na mlengeni majadiliano yenu juu ya dharura
-zake na mahitaji.”
-</span></p>
-				<!--
-				<p class="tags">
-				<span>Tagged in </span>:
-				<a href="#">orci</a>, <a href="#">lectus</a>, <a href="#">varius</a>, <a href="#">turpis</a>
-			</p>
-		-->
-	</div>
-
-	<div class="col g-4">
-		<div>
-			<div class="col g-3 author-image">
-				<img src="images/portfolio/vector-flower.jpg" alt="Sakura Haruno" />
-			</div>
-
-			<div class="col g-9 entry-title sub-entry-title">
-				<h6><a href="forces.html">Nguvu za muungano na mmonyoko</a></h6>
-				<p>Roho mpya yenye uwezo mkubwa sana imeamka ulimwenguni, kutuongoza kwenye njia ya maisha yenye haki zaidi na yenye amani.
-					<a href="#" class="more-link">Zaidi <i class="icon-angle-right"></i></a></p>
-				</div>
-			</div>
-
-			<!-- Sub sections -->
-			<div>
-				<div class="col g-3 author-image">
-					<img src="images/portfolio/judah.jpg" alt="Sakura Haruno" />
-				</div>
-
-				<div class="col g-9 entry-title sub-entry-title">
-					<h6><a href="roleofyouth.html">Kazi ya vijana katika jamii </a></h6>
-					<p> Vijana wanapenda sana maswali magumu na kukuza vipaji na stadi zao.
-						<a href="#" class="more-link">Zaidi <i class="icon-angle-right"></i></a></p>
-					</div>
-				</div>
-				<!-- End sub sections -->
-
-				<!-- Sub sections -->
-				<div>
-					<div class="col g-3 author-image">
-						<img src="images/portfolio/eve.jpg" alt="Sakura Haruno" />
-					</div>
-
-					<div class="col g-9 entry-title sub-entry-title">
-						<h6><a href="workandservice.html">Kazi na Utumishi</a></h6>
-						 <p>“Imeamriwa kwa kila mmoja wenu kujishughulisha na aina fulani shughuli, kama stadi, biashara na kadhalika"
-							<a href="#" class="more-link">Zaidi <i class="icon-angle-right"></i></a></p>
+		<div class="container">
+			<div class="row">
+					<div class="row">
+						<div class="col post-image">
+							<img src="images/post-image/post-community-building.jpg" alt="post-image" title="post-image">
 						</div>
 					</div>
-					<!-- End sub sections -->
 
-					<!-- Sub sections -->
+					<div class="row">
+						<div class="col">
+							<h2>Kujenga Jumuiya</h2>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col g-8 post-content">
+
+							<p class="intro">
+			Wa-Bahá'í wanajitahidi kujiweka sambamba na michakato inayojenga ambayo inahabarishwa na umoja huu wa kimsingi wa jamii ya wanadamu, dini, na Mungu, na kutembea pamoja juu ya njia ya utumishi.
+			</p>
+
+							<p class="intro">WaBahá’í wanatoka matabaka yote ya jamii. Vijana na
+			wazee, wanaume na wanawake kadhalika, wanaishi
+			kando la wengine wa kila nchi na wanakuwa wa kila taifa. Wanashiriki lengo la pamoja la kuhudumia binadamu na kuboresha maisha yao ya ndani kufuatana na mafundisho ya Bahá’u’lláh. Jumuiya ambayo ni kwao ni moja ya kujifunza na kutenda, huru kutoka hisia yoyote ya kiburi au madai ya kuwa na uelewa wa pekee wa ukweli. Ni jumuiya inayojitahidi kukuza matumaini kwa wakati ujao wa binadamu, kuendeleza jitihada zenye madhumuni, na kusherehekea juhudi za wale wote ulimwenguni wanaofanya kazi kujenga umoja na kutuliza
+			mateso ya kibinadamu.
+			</p>
+
+							<p class="intro">Bahá’u’lláh aliwashauri wafuasi Wake: <span class="paragraph-bold">“Muwe wenye
+			wasiwasi sana kuhusu mahitaji ya zama ambamo
+			mnaishi, na mlengeni majadiliano yenu juu ya dharura
+			zake na mahitaji.”
+			</span></p>
+							<!--
+							<p class="tags">
+							<span>Tagged in </span>:
+							<a href="#">orci</a>, <a href="#">lectus</a>, <a href="#">varius</a>, <a href="#">turpis</a>
+						</p>
+					-->
+				</div>
+
+				<div class="col g-4">
 					<div>
 						<div class="col g-3 author-image">
-							<img src="images/portfolio/clock.jpg" alt="Sakura Haruno" />
+							<img src="images/portfolio/vector-flower.jpg" alt="Sakura Haruno" />
 						</div>
 
 						<div class="col g-9 entry-title sub-entry-title">
-							<h6><a href="communityactivities.html">Shughuli za kujenga Jumuiya</a></h6>
-							<p>Wa-Bahá'í pamoja na marafiki zao kila mahali wanashughulika katika mchakato wa kuendeleza maendeleo yao ya kiroho, kijamii na kiakili na kuchangia kwa maendeleo ya jumuiya zao.
+							<h6><a href="forces.html">Nguvu za muungano na mmonyoko</a></h6>
+							<p>Roho mpya yenye uwezo mkubwa sana imeamka ulimwenguni, kutuongoza kwenye njia ya maisha yenye haki zaidi na yenye amani.
 								<a href="#" class="more-link">Zaidi <i class="icon-angle-right"></i></a></p>
 							</div>
 						</div>
-						<!-- End sub sections -->
-						<div class="col quotecolumn">
-							<p class="intro quote" id="mainquote">"Uboreshaji wa ulimwengu unaweza kupatikana tu kupitia vitendo safi na vyema, kupitia tabia inayostahili na inayosifika."  </p>
-							<p class="manifestation">
-								— Bahá’u’lláh
-							</p>
+
+						<!-- Sub sections -->
+						<div>
+							<div class="col g-3 author-image">
+								<img src="images/portfolio/judah.jpg" alt="Sakura Haruno" />
+							</div>
+
+							<div class="col g-9 entry-title sub-entry-title">
+								<h6><a href="roleofyouth.html">Kazi ya vijana katika jamii </a></h6>
+								<p> Vijana wanapenda sana maswali magumu na kukuza vipaji na stadi zao.
+									<a href="#" class="more-link">Zaidi <i class="icon-angle-right"></i></a></p>
+								</div>
+							</div>
+							<!-- End sub sections -->
+
+							<!-- Sub sections -->
+							<div>
+								<div class="col g-3 author-image">
+									<img src="images/portfolio/eve.jpg" alt="Sakura Haruno" />
+								</div>
+
+								<div class="col g-9 entry-title sub-entry-title">
+									<h6><a href="workandservice.html">Kazi na Utumishi</a></h6>
+									<p>“Imeamriwa kwa kila mmoja wenu kujishughulisha na aina fulani shughuli, kama stadi, biashara na kadhalika"
+										<a href="#" class="more-link">Zaidi <i class="icon-angle-right"></i></a></p>
+									</div>
+								</div>
+								<!-- End sub sections -->
+
+								<!-- Sub sections -->
+								<div>
+									<div class="col g-3 author-image">
+										<img src="images/portfolio/clock.jpg" alt="Sakura Haruno" />
+									</div>
+
+									<div class="col g-9 entry-title sub-entry-title">
+										<h6><a href="communityactivities.html">Shughuli za kujenga Jumuiya</a></h6>
+										<p>Wa-Bahá'í pamoja na marafiki zao kila mahali wanashughulika katika mchakato wa kuendeleza maendeleo yao ya kiroho, kijamii na kiakili na kuchangia kwa maendeleo ya jumuiya zao.
+											<a href="#" class="more-link">Zaidi <i class="icon-angle-right"></i></a></p>
+										</div>
+									</div>
+									<!-- End sub sections -->
+									<div class="col quotecolumn">
+										<p class="intro quote" id="mainquote">"Uboreshaji wa ulimwengu unaweza kupatikana tu kupitia vitendo safi na vyema, kupitia tabia inayostahili na inayosifika."  </p>
+										<p class="manifestation">
+											— Bahá’u’lláh
+										</p>
+									</div>
+
+								</div>
+
+
+
+							</div>
+
 						</div>
-
 					</div>
-
-
-
-				</div>
-
+			
 
 			</article> <!-- Post End -->
 
@@ -211,6 +224,13 @@ zake na mahitaji.”
 			<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
 
 			<script src="js/smoothscrolling.js"></script>
+
+				   <!-- Adding support to Bootstrap-->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
 
 		</body>
 
