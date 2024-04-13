@@ -343,6 +343,19 @@ ul#nav li:hover > a,
 ul#nav li.active a { color: #11ABB0; }
 
 
+/*---------*/
+/*LIBRARY SECTION*/
+
+.row.entry-header {
+   /* text-align: center; */
+   display: grid !important;
+}
+
+
+
+/*-------*/
+
+
 
 /* ================================================================== */
 
@@ -1595,10 +1608,10 @@ footer .social-links li:first-child { margin-left: 0; }
       font-size: 25px !important;
    }
    .intro-head-inner h2{
-      font-size: 25px;
+      font-size: 25px !important;
    }
    .intro-head-inner h3{
-      font-size: 18px;
+      font-size: 18px !important;
    }
    .lib-flexslider{
       height:300px;
