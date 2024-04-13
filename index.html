@@ -14,12 +14,15 @@
 
 	<!-- Mobile Specific Metas
 	================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- CSS
 	================================================== -->
 	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/layout.css">
+
+	<!-- Adding Bootstrap 13 Apr 2024:Brian-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 	<!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -39,39 +42,38 @@
 	================================================== -->
 	<header class="mobile mobile-static">
 
-		<div class="row">
+		<div class="container">
+			<div class="row">
+					<div class="col-6 logo">
+						<a href="#"><img alt="" src="images/logo.png"></a>
+					</div>
+					<div class="col-4 library">
+						<ul>
+							<li>
+								<img class="libraryimage" src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNy44MiAyNy44MiI+PGRlZnM+PHN0eWxlPi5jbHMtMSB7b3BhY2l0eTogMC45O30uY2xzLTIge29wYWNpdHk6IDAuNjt9LmNscy0zIHtvcGFjaXR5OiAwLjM7fS5jbHMtMSwuY2xzLTIsLmNscy0zIHtmaWxsOiAjM2UzOTM4O2lzb2xhdGlvbjogaXNvbGF0ZTt9PC9zdHlsZT48L2RlZnM+PGcgaWQ9IklDTl9BbGxfU2l0ZXNfIiBkYXRhLW5hbWU9IklDTiBBbGwgU2l0ZXMgIj48cmVjdCBpZD0iUmVjaHRlY2tfMTAxMSIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDExIiBjbGFzcz0iY2xzLTEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTIiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxMiIgY2xhc3M9ImNscy0xIiB4PSIxMC4wOSIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxMyIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDEzIiBjbGFzcz0iY2xzLTEiIHg9IjIwLjE3IiB3aWR0aD0iNy44NCIgaGVpZ2h0PSI3Ljc5IiAvPjxyZWN0IGlkPSJSZWNodGVja18xMDE0IiBkYXRhLW5hbWU9IlJlY2h0ZWNrIDEwMTQiIGNsYXNzPSJjbHMtMiIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTUiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNSIgY2xhc3M9ImNscy0xIiB4PSIxMC4wOSIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTYiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNiIgY2xhc3M9ImNscy0yIiB4PSIyMC4xNyIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTciIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNyIgY2xhc3M9ImNscy0zIiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxOCIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDE4IiBjbGFzcz0iY2xzLTMiIHg9IjEwLjA5IiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxOSIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDE5IiBjbGFzcz0iY2xzLTMiIHg9IjIwLjE3IiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48L2c+PC9zdmc+">
+								<a class="librarylink" href="./library">
+									Library
+							</a></li>
+						</ul>
+					</div>
+					<div class="col-2">
+						<nav id="nav-wrap">
 
-			<div class="col full">
+							<a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+							<a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
 
-				<div class="logo">
-					<a href="#"><img alt="" src="images/logo.png"></a>
+							<ul id="nav" class="nav">
+
+								<li class="active"><a href="#intro" >Mwanzoni</a></li>
+								<li><a href="purposeofourlives.html">Kusudi la Maisha Yetu</a></li>
+								<li><a href="communitybuilding.html">Kujenga Jumuiya</a></li>
+								<li><a href="familylife.html">Maisha ya Familia</a></li>
+								<li><a href="scienceandreligion.html">Sayansi na Dini</a></li>
+								
+							</ul>
+						</nav>
 				</div>
-
-				<nav id="nav-wrap">
-
-					<a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-					<a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
-
-					<ul id="nav" class="nav">
-
-						<li class="active"><a href="#intro" >Mwanzoni</a></li>
-						<li><a href="purposeofourlives.html">Kusudi la Maisha Yetu</a></li>
-						<li><a href="communitybuilding.html">Kujenga Jumuiya</a></li>
-						<li><a href="familylife.html">Maisha ya Familia</a></li>
-						<li><a href="./library">Reference Library</a></li>
-						<li><a href="scienceandreligion.html">Sayansi na Dini</a></li>
-					</ul>
-
-					<ul>
-						<li><a>Library</a></li>
-					</ul>
-
-
-
-				</nav>
-
 			</div>
-
 		</div>
 
 	</header> <!-- Header End -->
@@ -82,36 +84,40 @@
 	<section id="intro">
 
 		<!-- Flexslider Start-->
-		<div id="intro-slider" class="flexslider">
+		<div class="container"> 
+			<div class="row">
+				<div id="intro-slider" class="flexslider">
 
-			<ul class="slides">
+					<ul class="slides">
 
-				<!-- Slide -->
-				<li>
-					<div class="row">
-						<div class="col full">
-							<div class="slider-text">
-								<h2>Tovuti ya wabahai adfjlajsdfjlwa Tanzania</h2>
-							</div>
-						</div>
-					</div>
-				</li>
-
-				<!-- Slide -->
-				<!--
-				<li>
-					<div class="row">
-						<div class="col full">
-							<div class="slider-text">
-								<h2>Regard man as <a href="#" title="">Mine</a> reach in  <a href="#" title="">gems</a> of inestimable value.</h2>
+					<!-- Slide -->
+					<li>
+						<div class="row">
+							<div class="col full">
+								<div class="slider-text">
+									<h2>Jamii ya wabahai wa Tanzania</h2>
 								</div>
 							</div>
 						</div>
 					</li>
-				-->
 
-				</ul>
+					<!-- Slide -->
+					<!--
+					<li>
+						<div class="row">
+							<div class="col full">
+								<div class="slider-text">
+									<h2>Regard man as <a href="#" title="">Mine</a> reach in  <a href="#" title="">gems</a> of inestimable value.</h2>
+									</div>
+								</div>
+							</div>
+						</li>
+					-->
+
+					</ul>
+				</div>
 			</div>
+		</div>
 			<!-- Flexslider End-->
 
 		</section> <!-- Intro Section End-->
@@ -120,134 +126,95 @@
 		<!-- Portfolio Section
 		================================================== -->
 		<section id="portfolio">
-
+		<div class="container">
 			<div class="row section-head">
 				<div class="col full">
 
 					<h2>Utangulizi wa Imani ya Kibaha’i</h2>
 
-					<p class="intro">Katika historia, Mungu amekuwa akituma kwa binadamu
-mlolongo wa Waelimishaji watakatifu —wajulikanao kama
-Wadhihirishaji wa Mungu — ambao mafundisho yao
-yametoa msingi kwa ajili ya uendelezaji wa ustaarabu.
-Wadhihirishaji hao hujumuisha Abraham, Krishna,
-Zoroaster, Moses, Buddha, Jesus, na Muhammad.
-Bahá’u’lláh, mtume wa sasa miongoni mwa hawa,
-alieleza kuwa dini za ulimwengu zimekuja kutoka Chanzo
-kimoja na kwa asili katika mfuatano wa kurasa za dini
-moja kutoka kwa Mungu.
+					<p class="intro">Katika historia, Mungu amekuwa akituma kwa binadamu mlolongo wa Waelimishaji watakatifu —wajulikanao kama Wadhihirishaji wa Mungu — ambao mafundisho yao
+					yametoa msingi kwa ajili ya uendelezaji wa ustaarabu.
+					Wadhihirishaji hao hujumuisha Abraham, Krishna,
+					Zoroaster, Moses, Buddha, Jesus, na Muhammad.
+					Bahá’u’lláh, mtume wa sasa miongoni mwa hawa,
+					alieleza kuwa dini za ulimwengu zimekuja kutoka Chanzo
+					kimoja na kwa asili katika mfuatano wa kurasa za dini
+					moja kutoka kwa Mungu.
 
 					</p>
 
 					<h3>Uwepo wa Wa-Baha’i Tanzania</h3>
 					<p class="intro"> WaBahá’í huamini kuwa hitaji muhimu linaloikabili binadamu ni utafutaji wa muono wa pamoja wa jamii ya wakati ujao na asili na makusudi ya maisha. Muono kama huo unakunjuka katika maandiko ya Bahá’u’lláh.</p>
-     <h5>Wa-Baha’i wa Tanzania</h5>
-					<p class="intro">Mnamo 1950 Imani ya Baha’i ilikuja Tanzania. Leo wapo Wa-Baha’i katika takriban maeneo 3000 kila mahali nchini, na zaidi ya halmashauri 150 za Kiroho za Mahali ambazo zinaitwa Mabaraza ya Kiroho ya Mahali. Wa-Baha’i huamini katika elimu ya wote na utokomezaji wa ubaguzi wa aina zote, kama ni wa mbari, kabala, kitaifa, kidini au ya usuli wa kijamii.
-</p>
+   					  <h5>Wa-Baha’i wa Tanzania</h5>
+					<p class="intro">Mnamo 1950 Imani ya Baha’i ilikuja Tanzania. Leo wapo Wa-Baha’i katika takriban maeneo 3000 kila mahali nchini, na zaidi ya halmashauri 150 za Kiroho za Mahali ambazo zinaitwa Mabaraza ya Kiroho ya Mahali. Wa-Baha’i huamini katika elimu ya wote na utokomezaji wa ubaguzi wa aina zote, kama ni wa mbari, kabala, kitaifa, kidini au ya usuli wa kijamii.</p>
 					<p class="intro">Wa-Baha’i huendesha madarasa ya watoto juu ya elimu ya sifa njema na maadili ya mtu; mikutano ya ibada,; na vikundi vya mafunzo kwa ajili ya watu wazima na vijana juu ya mada za kiroho. Wa-Baha’i wa Tanzania wanaendesha Shule ya Sekondari ya Ruaha huko Iringa pamoja na shule nyingine nyingi katika jumuiya za kila mahali nchini.</p>
-
-					</div>
-
-
 				</div>
+			</div>
+		</div>
 
-				<!-- Blog Entries -->
-				<div class="blog-entries">
-
-					<!-- Entry -->
-					<div class="row">
-
-						<!-- first column -->
-						<div class="col g-9">
-
+		<!-- Blog Entries -->
+		<div class="container blog-entries">
+			<!-- Entry -->
+			<div class="row">
+				<!-- first column -->
+				<div class="col-lg-9 col-md-12">
 					<article class="entry">
-
 						<div class="row entry-header">
-
 							<div class="col g-3 author-image">
 								<img src="images/portfolio/purpose-of-our-lives-300x111.jpg" alt="Purpose of our lives" />
 							</div>
-
 							<div class="col g-9 entry-title">
 								<h3><a href="purposeofourlives.html">Kusudi la Maisha Yetu</a></h3>
 								<p class="intro">Ufunuo wa Baha’u’llah unathibitisha kuwa kusudi la maisha yetu ni kumjua Mungu na kufikia uwepo Wake. Utambulisho wetu wa kweli ni  roho yetu yenye mantiki, ambayo nia yake huru na uwezo wake wa kuelewa hutuwezesha daima kujiboresha wenyewe na jamii yetu...<a href="purposeofourlives.html" class="more-link">Soma Zaidi <i class="icon-angle-right"></i></a></p>
 							</div>
-
 						</div>
-
-						</article> <!-- Entry End -->
-
-
-						<article class="entry">
-
-							<div class="row entry-header">
-
-								<div class="col g-3 author-image">
-									<img src="images/portfolio/community-building-300x111.jpg" alt="Community Building" />
-								</div>
-
-								<div class="col g-9 entry-title">
-									<h3><a href="communitybuilding.html">Kujenga Jumuiya</a></h3>
-									<p class="intro">“Fikirieni  kwa wasiwasi juu mahitaji ya zama tunamoishi, na wekeni maamuzi yenu juu ya  matakwa na mahitaji yake.”...
-										<a href="communitybuilding.html" class="more-link">Soma Zaidi <i class="icon-angle-right"></i></a></p>
-								</div>
-
-
+					</article> <!-- Entry End -->
+					<article class="entry">
+						<div class="row entry-header">
+							<div class="col g-3 author-image">
+								<img src="images/portfolio/community-building-300x111.jpg" alt="Community Building" />
 							</div>
-
-							</article> <!-- Entry End -->
-
-
-							<article class="entry">
-
-								<div class="row entry-header">
-
-									<div class="col g-3 author-image">
-										<img src="images/portfolio/family-life-300x111.jpg" alt="Family Life" />
-									</div>
-
-									<div class="col g-9 entry-title">
-										<h3><a href="familylife.html">Maisha ya Familia</a></h3>
-										<p class="intro">“Na juu ya miunganiko yote ni ule kati ya wanadamu, hususan unapotokea kwa sababu ya upendo wa Mungu. Hivyo ndo namna umoja mkuu umefanya kutokea. Hivyi ndo huwekwa msingi wa upendo katika roho”...
-											<a href="familylife.html" class="more-link">Soma Zaidi<i class="icon-angle-right"></i></a></p>
-									</div>
-
-								</div>
-
-								</article> <!-- Entry End -->
-
-
-								<article class="entry">
-
-									<div class="row entry-header">
-
-										<div class="col g-3 author-image">
-											<img src="images/portfolio/science-and-religion-300x111.jpg" alt="Science and Religion" />
-										</div>
-
-										<div class="col g-9 entry-title">
-											<h3><a href="scienceandreligion.html">Upatano kati ya Sayansi na Dini</a></h3>
-											<p class="intro">[Kutambua sababu] humpatia mtu uwezo wa kuchanganua ukweli katika vitu yote, humuongoza kuelekea njia sahihi, na humsaidia kugundua siri za muumbo
-												<a href="scienceandreligion.html" class="more-link">Soma Zaidi<i class="icon-angle-right"></i></a></p>
-										</div>
-
-									</div>
-
-									</article> <!-- Entry End -->
-
-								</div> <!-- end of first column -->
-
-								<div class="col g-3 quotecolumn">
-									<p class="intro quote" id="mainquote">"Fanya mtazamo wako ukumbatie dunia nzima"</p>
-										<p class="manifestation">
-											— Bahá’u’lláh
-										</p>
-
-								</div>
-
+							<div class="col g-9 entry-title">
+								<h3><a href="communitybuilding.html">Kujenga Jumuiya</a></h3>
+								<p class="intro">“Fikirieni  kwa wasiwasi juu mahitaji ya zama tunamoishi, na wekeni maamuzi yenu juu ya  matakwa na mahitaji yake.”...
+									<a href="communitybuilding.html" class="more-link">Soma Zaidi <i class="icon-angle-right"></i></a></p>
 							</div>
+						</div>
+					</article> <!-- Entry End -->
+					<article class="entry">
+						<div class="row entry-header">
+							<div class="col g-3 author-image">
+								<img src="images/portfolio/family-life-300x111.jpg" alt="Family Life" />
+							</div>
+							<div class="col g-9 entry-title">
+								<h3><a href="familylife.html">Maisha ya Familia</a></h3>
+								<p class="intro">“Na juu ya miunganiko yote ni ule kati ya wanadamu, hususan unapotokea kwa sababu ya upendo wa Mungu. Hivyo ndo namna umoja mkuu umefanya kutokea. Hivyi ndo huwekwa msingi wa upendo katika roho”...
+									<a href="familylife.html" class="more-link">Soma Zaidi<i class="icon-angle-right"></i></a></p>
+							</div>
+						</div>
+					</article> <!-- Entry End -->
+					<article class="entry">
+						<div class="row entry-header">
+							<div class="col g-3 author-image">
+								<img src="images/portfolio/science-and-religion-300x111.jpg" alt="Science and Religion" />
+							</div>
+							<div class="col g-9 entry-title">
+								<h3><a href="scienceandreligion.html">Upatano kati ya Sayansi na Dini</a></h3>
+								<p class="intro">[Kutambua sababu] humpatia mtu uwezo wa kuchanganua ukweli katika vitu yote, humuongoza kuelekea njia sahihi, na humsaidia kugundua siri za muumbo
+									<a href="scienceandreligion.html" class="more-link">Soma Zaidi<i class="icon-angle-right"></i></a></p>
+							</div>
+						</div>
+					</article> <!-- Entry End -->
+				</div> <!-- end of first column -->
+				<div class="col-lg-3 col-md-12 quotecolumn">
+					<p class="intro quote" id="mainquote">"Fanya mtazamo wako ukumbatie dunia nzima"</p>
+						<p class="manifestation">
+							— Bahá’u’lláh
+						</p>
 
-							</div> <!-- Blog Entries End -->
+				</div>
+			</div>
+		</div> <!-- Blog Entries End -->
 
 						</section>  <!-- Journal Section End -->
 
@@ -262,11 +229,10 @@ moja kutoka kwa Mungu.
 										</section> <!-- Map Section End-->
 										<!-- Contact Section
 										================================================== -->
-										<section id="contact">
-
+									<section id="contact">
+										<div class="container">
 											<div class="row">
-
-												<aside class="col g-7">
+												<aside class="col-7">
 
 														<h3>Njia za mawasiliano nasi</h3>
 													<b>Tungependa kusikia kutoka kwako:</b>
@@ -278,25 +244,20 @@ moja kutoka kwa Mungu.
 														Dar es salaam.
 													</p>
 												</aside>
-
-
-												<aside class="col g-5">
-
+												<aside class="col-5">
 													<h3>Physical Address</h3>
 													<p>Kituo cha Kitaifa cha wabahai, kipo<br>
 														Makongo Juu, karibu na Shule ya Msingi Makongo Juu
 													</p>
-
-
 													<p>
 														<b>Simu:</b> (+255)-22-2152766 <br />
 														<b>Barua Pepe:</b> <a href="mailto:secretariat@bahai.or.tz" target="_blank">secretariat@bahai.or.tz</a>
 													</p><br />
 													</aside>
 
-												</div>
-
-											</section> <!-- Contact Section End-->
+											</div>
+										</div>
+									</section> <!-- Contact Section End-->
 
 											<!-- footer
 											================================================== -->
@@ -343,6 +304,12 @@ moja kutoka kwa Mungu.
 											<!--<script src="js/gmaps.js"></script>-->
 											<script src="js/init.js"></script>
 											<script src="js/smoothscrolling.js"></script>
+											
+
+											<!-- Adding support to Bootstrap-->
+											<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 										</body>
 

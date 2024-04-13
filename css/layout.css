@@ -25,9 +25,51 @@
 
 /* ================================================================== */
 
-.section-head h2 { font: 30px/42px montserrat-bold, sans-serif; }
+h2 { 
+   /*font: 30px/42px montserrat-bold, sans-serif; */
+   font-size: 30px;
+    line-height: 42px;
+    margin-bottom: 6px;
+    line-height: 2.7rem;
+    font-size: 2.25rem !important;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgb(38, 35, 34);
+    margin-block: 0.5rem;
+    font-family: adobe-garamond-pro, Georgia, "Times New Roman", Times, serif !important;
+}
+h3{
+   line-height: 30px;
+    font-size: 22px;
+    line-height: 42px;
+    margin-bottom: 6px;
+    line-height: 2.7rem;
+    /* font-size: 2.25rem; */
+    max-width: 575px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgb(38, 35, 34);
+    margin-block: 0.5rem;
+    font-family: adobe-garamond-pro, Georgia, "Times New Roman", Times, serif !important;
+}
 .desc { font: 14px/24px opensans-regular, sans-serif; }
-.intro { font: 20px/36px opensans-light, sans-serif; /*color:#565658;*/ color: #333233}
+.intro { 
+   font: 20px/36px opensans-light, sans-serif; /*color:#565658;*/ 
+   color: #333233;
+   font: 20px / 36px opensans-light, sans-serif;
+   /*
+   font-family: adobe-garamond-pro, Georgia, "Times New Roman", Times, serif;
+    font-weight: 400;
+   font-size: 1.2rem;
+    text-align: start;
+    margin-bottom: 20px;
+*/
+    /* font-family: adobe-garamond-pro, Georgia, "Times New Roman", Times, serif; */
+    /* color: #565658; */
+    /* color: #333233; */
+}
 
 /* Left clearing for flexible columns - columns that changes width in
 different screen sizes. Makes columns with different heights align
@@ -78,7 +120,6 @@ properly.
 .slides:after {
     clear: both;
 }
-
 /* ================================================================== */
 
 /* b. Header Styles
@@ -86,12 +127,10 @@ properly.
 /* ================================================================== */
 
 header {
-   height: 54px;
+   height: 80px;
    width: 100%;
    z-index: 99999;
-   background: url(../images/k-opacity-70.png);
-
-   position: fixed;
+   background: #8e673e url(../images/k-opacity-70.png);
    top: 0;
    left: 0;
 }
@@ -114,12 +153,37 @@ header .logo a {
    /*height: 18px;
    width: 91px;*/
    line-height: 18px;
-
-   position: absolute;
-   left: 12px;
-   top: 16px;
 }
 
+.iMzCzh {
+   width: 5.5rem;
+   height: 2rem;
+   background: transparent;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   display: flex;
+   gap: 12px;
+   -webkit-box-align: center;
+   align-items: center;
+   -webkit-box-pack: center;
+   justify-content: center;
+   user-select: none;
+}
+img.libraryimage{
+      height: 20px;
+      width: 20px;
+}
+a.librarylink{
+color:white !important;
+margin-left:10px;
+}
+.library{
+   margin-top:30px;
+}
+ul{
+   float:right;
+}
 /* primary navigation
 --------------------------------------------------------------------- */
 #nav-wrap ul, #nav-wrap li, #nav-wrap a {
@@ -159,21 +223,84 @@ header .logo a {
    color:#0f9095;
 }
 /* nav-wrap */
-#nav-wrap {
-	position: relative;
-   font: 13px opensans-regular, sans-serif;
-   float: left;
+.mobile #nav-wrap  {
+   /*position: absolute;*/
+   top: 0;
+   right: 20px;
+   width: 250px;
+   margin: 0;
+   display:block;
+}
+
+#nav-wrap > a {
+   width: 48px;
+   height: 48px;
+   text-align: left;
+   /* background-color: #11ABB0; */
+   background-color: #8E673E;
+   position: absolute;
+   border: none;
+   float: right;
+   font: 0 / 0 a;
+   text-shadow: none;
+   color: transparent;
+}
+.mobile #nav-wrap:target > a:last-of-type {
+   display: block;
+}
+.mobile #nav-wrap > a:before, .mobile #nav-wrap > a:after {
+   position: absolute;
+   border: 2px solid #fff;
+   top: 35%;
+   left: 25%;
+   right: 25%;
+   content: '';
+}
+.mobile #nav-wrap > a:after {
+   top: 60%;
+}
+.mobile #nav-wrap > a:after {
+   position: absolute;
+   border: 2px solid #fff;
+   top: 60%;
+   left: 25%;
+   right: 25%;
+   content: '';
+}
+.mobile #nav-wrap:target > ul#nav {
+   display: block;
+   padding: 12px 25px 24px 25px;
+   background: #4c4e5a;
+   margin: 0;
+   clear: both;
+}
+.mobile #nav-wrap ul#nav li {
+   display: block;
+   width: 100%;
+   height: 100%;
+   text-align: left;
+}
+.mobile #nav-wrap ul#nav li {
+   border-bottom: 1px dotted #595B6A;
 }
 
 /* hide toggle button */
+
+a.mobile-btn{
+   display:none;
+
+}
 #nav-wrap > a { display: none; }
+#nav-wrap:not( :target ) > a:first-of-type{
+   display:block;
+}
+
 
 ul#nav {
    min-height: 54px;
    width: auto;
-
-   /* left align the menu */
    text-align: left;
+   display:none;
 }
 ul#nav li {
 	position: relative;
@@ -219,7 +346,7 @@ ul#nav li.active a { color: #11ABB0; }
 #intro {
    background: #111 url(../images/intro-bg.jpg) no-repeat center;
    overflow: hidden;
-   margin-top: 55px;
+   min-height:500px !important;
 }
 #libintro {
    background: #111 url(../images/patterns/grey.png) center ;
@@ -348,7 +475,8 @@ ul#nav li.active a { color: #11ABB0; }
 /* ================================================================== */
 
 #portfolio {
-   background: #f5f5f5 url(../images/patterns/grey.png);
+   background: #f5f5f5;
+   /*background:#e0d9d9;*/
    padding-top: 50px;
    padding-bottom: 50px;
 }
@@ -804,7 +932,7 @@ ul#nav li.active a { color: #11ABB0; }
 /* ================================================================== */
 
 .post {
-   background: #f5f5f5 url(../images/patterns/grey.png);
+   background: #f5f5f5;
    /*padding-top: 120px;*/
    padding-bottom: 90px;
    margin-top:55px;
@@ -1310,7 +1438,13 @@ footer .social-links li:first-child { margin-left: 0; }
 
    }
    .post .post-meta { margin-top: 6px; }
-   .post .post-image { margin: 12px 0 24px 0 }
+   .post .post-image { 
+      margin: 12px 0 24px 0; 
+      margin:0;
+      padding:0;
+      min-height: 300px;
+
+   }
    .post .bio .about { padding-left: 18px; }
 
 }
@@ -1332,8 +1466,8 @@ footer .social-links li:first-child { margin-left: 0; }
    /* mobile navigation
    -------------------------------------------------------------------- */
 
-   header.mobile { height: 55px; }
-   header.mobile .logo a { top: 22px; }
+/*   header.mobile { height: 55px; }*/
+   /*header.mobile .logo a { top: 22px; }*/
 
    .mobile #nav-wrap {
       position: absolute;
@@ -1398,6 +1532,7 @@ footer .social-links li:first-child { margin-left: 0; }
       background: #4c4e5a;
       margin: 0;
       clear: both;
+      width:200px;
    }
    .mobile #nav-wrap ul#nav li { border-bottom: 1px dotted #595B6A; }
    .mobile #nav-wrap ul#nav li a {
@@ -1698,7 +1833,7 @@ footer .social-links li:first-child { margin-left: 0; }
 }
 
 header.mobile-static{
- position: absolute !important;
+ /*position: absolute !important;*/
 }
 
 .paragraph-bold{
