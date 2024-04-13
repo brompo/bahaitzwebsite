@@ -1592,7 +1592,7 @@ footer .social-links li:first-child { margin-left: 0; }
       width: auto;
    }
    .intro-head h2{
-      font-size: 25px;
+      font-size: 25px !important;
    }
    .intro-head-inner h2{
       font-size: 25px;
