@@ -351,7 +351,7 @@ ul#nav li.active a { color: #11ABB0; }
 #libintro {
    background: #111 url(../images/patterns/grey.png) center ;
    overflow: hidden;
-   margin-top: 55px;
+   /*margin-top: 55px;*/
 }
 
 /* FlexSlider Intro Slider Styles */
@@ -935,7 +935,6 @@ ul#nav li.active a { color: #11ABB0; }
    background: #f5f5f5;
    /*padding-top: 120px;*/
    padding-bottom: 90px;
-   margin-top:55px;
 }
 .post .entry-header {
    position: relative;
@@ -1430,7 +1429,7 @@ footer .social-links li:first-child { margin-left: 0; }
 
    /* blog
    -------------------------------------------------------------------- */
-   .post, #blog-entries .post { padding-top: 10px; margin-top: 55px;}
+   /*.post, #blog-entries .post { padding-top: 10px; margin-top: 55px;}*/
    .post p.lead, #blog-entries .post .post-content p { font-size: 18px; }
    .post .entry-header h1 {
       padding-right: 18px;
@@ -1442,8 +1441,6 @@ footer .social-links li:first-child { margin-left: 0; }
       margin: 12px 0 24px 0; 
       margin:0;
       padding:0;
-      min-height: 300px;
-
    }
    .post .bio .about { padding-left: 18px; }
 
