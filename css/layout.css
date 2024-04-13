@@ -99,7 +99,7 @@ properly.
    padding: 0;
 }
 .lib-flexslider {
-   position: relative;
+   /*position: relative;*/ 
    zoom: 1;
    margin: 0;
    padding: 0;
