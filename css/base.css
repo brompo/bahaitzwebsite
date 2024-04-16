@@ -180,7 +180,7 @@ p.lead { font: 20px/36px opensans-light, sans-serif; color:#565658;}
 
 /* for 'em' and 'strong' tags, font-size and line-height should be same with
 the body tag due to rendering problems on some browsers*/
-em { font: 15px/30px opensans-italic, sans-serif; }
+em { font: 15px/30px opensans-italic, sans-serif;    text-align: -webkit-center;}
 strong, b { font: 15px/30px opensans-bold, sans-serif; }
 small { font-size: 11px; line-height: inherit; }
 
@@ -291,6 +291,16 @@ text-decoration: none;
 outline: 0;
 color:#11ABB0;
 
+-webkit-transition:color .3s ease-in-out;
+-moz-transition:color .3s ease-in-out;
+-o-transition:color .3s ease-in-out;
+transition:color .3s ease-in-out;
+
+}
+a {
+text-decoration: none;
+outline: 0;
+color:#11ABB0 !important;
 -webkit-transition:color .3s ease-in-out;
 -moz-transition:color .3s ease-in-out;
 -o-transition:color .3s ease-in-out;
