@@ -199,6 +199,10 @@ ul{
    width:2.5em !important;
    background: #fff;
 }
+
+.dropdown-item.active{
+   background-color: #8E673E !important;
+}
 /* primary navigation
 --------------------------------------------------------------------- */
 #nav-wrap ul, #nav-wrap li, #nav-wrap a {
