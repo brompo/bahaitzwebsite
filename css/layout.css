@@ -188,10 +188,16 @@ margin-left:10px;
 .library{
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
+      margin: 0 0 0 550px;
+      
 }
 ul{
    float:right;
+}
+.navbar-toggler-icon{
+   height: 2.5em !important;
+   width:2.5em !important;
+   background: #fff;
 }
 /* primary navigation
 --------------------------------------------------------------------- */
@@ -1490,6 +1496,7 @@ footer .social-links li:first-child { margin-left: 0; }
       padding:0;
    }
    .post .bio .about { padding-left: 18px; }
+   .library { margin: 0;}
 
 }
 
@@ -1830,6 +1837,7 @@ footer .social-links li:first-child { margin-left: 0; }
       float: none;
    }
    footer .social-links { margin-top: 12px; }
+   .library{margin:0;}
 
 }
 
@@ -1853,6 +1861,7 @@ footer .social-links li:first-child { margin-left: 0; }
      font-size: 28px;
      line-height: 36px;
    }
+   .library{margin:0;}
 
 }
 
@@ -1992,6 +2001,7 @@ tr:hover {
    #portfolio .listingtable td:nth-of-type(3):before {
        content: "Summary of Content: ";
    }
+   .library{margin:0;}
 }
 
 caption, td, th {
