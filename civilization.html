@@ -20,6 +20,10 @@
    ================================================== -->
    <link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/layout.css">
+	<!-- Adding Bootstrap 14 Apr 2024:Brian-Ceasar-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
 
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -34,133 +38,95 @@
 
 <body class="full">
 
-   <!-- Header
+<!-- Header
+================================================== -->
+<header class="mobile mobile-static">
+	<nav class="navbar navbar-expand navbar-light">
+		<div class="container">
+			<!-- Logo -->
+			<a class="navbar-brand navbar-logo" href="#"><img alt="" src="images/logo.png"></a>
+	
+			<!-- Navbar Toggler Button for Mobile -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon " ></span>
+			</button>
+	
+			<!-- Library Link -->
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item library">
+					<img class="libraryimage" src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNy44MiAyNy44MiI+PGRlZnM+PHN0eWxlPi5jbHMtMSB7b3BhY2l0eTogMC45O30uY2xzLTIge29wYWNpdHk6IDAuNjt9LmNscy0zIHtvcGFjaXR5OiAwLjM7fS5jbHMtMSwuY2xzLTIsLmNscy0zIHtmaWxsOiAjM2UzOTM4O2lzb2xhdGlvbjogaXNvbGF0ZTt9PC9zdHlsZT48L2RlZnM+PGcgaWQ9IklDTl9BbGxfU2l0ZXNfIiBkYXRhLW5hbWU9IklDTiBBbGwgU2l0ZXMgIj48cmVjdCBpZD0iUmVjaHRlY2tfMTAxMSIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDExIiBjbGFzcz0iY2xzLTEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTIiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxMiIgY2xhc3M9ImNscy0xIiB4PSIxMC4wOSIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxMyIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDEzIiBjbGFzcz0iY2xzLTEiIHg9IjIwLjE3IiB3aWR0aD0iNy44NCIgaGVpZ2h0PSI3Ljc5IiAvPjxyZWN0IGlkPSJSZWNodGVja18xMDE0IiBkYXRhLW5hbWU9IlJlY2h0ZWNrIDEwMTQiIGNsYXNzPSJjbHMtMiIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTUiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNSIgY2xhc3M9ImNscy0xIiB4PSIxMC4wOSIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTYiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNiIgY2xhc3M9ImNscy0yIiB4PSIyMC4xNyIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTciIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNyIgY2xhc3M9ImNscy0zIiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxOCIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDE4IiBjbGFzcz0iY2xzLTMiIHg9IjEwLjA5IiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxOSIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDE5IiBjbGFzcz0iY2xzLTMiIHg9IjIwLjE3IiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48L2c+PC9zdmc+">
+						<a class="nav-link librarylink" href="./library">Library</a>
+					</li>
+			</ul>
+	
+			<!-- Navbar Content -->
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<!-- Navigation Links -->
+					<li class="nav-item dropdown" style="background: #8E673E; border-radius:10px;">
+						<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<!-- Hamburger Icon -->
+							<span class="navbar-toggler-icon"></span>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="index.html">Mwanzoni</a>
+							<a class="dropdown-item" href="purposeofourlives.html">Kusudi la Maisha Yetu</a>
+							<a class="dropdown-item" href="communitybuilding.html">Kujenga Jumuiya</a>
+							<a class="dropdown-item active" href="#familylife">Maisha ya Familia</a>
+							<a class="dropdown-item" href="scienceandreligion.html">Sayansi na Dini</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+</header> 
+<!-- Header End -->
+
+   <!-- Intro Section
    ================================================== -->
-   <header id="top" class="mobile mobile-static">
-
-      <div class="row">
-
-         <div class="col full">
-
-            <div class="logo">
-               <a href="index.html"><img alt="" src="images/logo.png"></a>
-            </div>
-
-            <nav id="nav-wrap">
-
-               <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-	            <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
-
-               <ul id="nav" class="nav">
-	               <li><a href="index.html">Home</a></li>
-	               <li class="active"><a href="purposeofourlives.html">Purpose of our lives</a></li>
-					<li><a href="communitybuilding.html">Community Building</a></li>
-					<li><a href="familylife.html">Family life</a></li>
-					<li><a href="./library">Reference Library</a></li>
-					<li><a href="scienceandreligion.html">Science and Religion</a></li>
-               </ul>
-
-            </nav>
-
-         </div>
-
-      </div>
-
-   </header> <!-- Header End -->
-
-   <!-- Post
-   ================================================== -->
-   <article class="post">
-
-      <div class="row">
-
-         <div class="col post-image">
+   <section class="post align-center pb-0">
+	<div class="container">
+		<div class="row align-items-center post-image">
             <img src="images/post-image/post-purpose-of-our-life.jpg" alt="post-image" title="post-image">
-         </div>
-								</div>
-
-								<div class="row">
-									<div class="col">
-										<h2>Building an ever advancing civilization</h2>
-									</div>
-								</div>
-
-
-								<div class="row">
-         <div class="col g-8 post-content">
-
+		</div>
+	</div>
+</section>
+<!-- Portfolio Section
+================================================== -->
+<section id="portfolio">
+	<div class="container">
+		<div class="row section-head">
+			<h2>Building an ever advancing civilization</h2>
             <p class="intro">The Bahá'í teachings offer a vision of a united and peaceful world, Bahá'u'lláh says
-<span class="inlinequote">"All men have been created to carry forward an ever-advancing civilization...."</span>
- </p>
+				<span class="inlinequote">"All men have been created to carry forward an ever-advancing civilization...."</span>
+			</p>
+				
+			<p class="intro">Humanity is approaching its collective maturity. People are coming to understand that this is one planet with one people. We now have the capacity to create a global society founded on justice.
+			</p>
+			<p class="intro">The aim of the prophet of God is to raise man to the degree of knowledge of his potentiality and to illumine him through the light of the kingdom, to transform ignorance into wisdom, injustice into justice, error into knowledge, cruelty into affection and incapability into progress. In short, to make all the attainments of existence resplendent in him.</p>
+				
+			<p class="intro">‘Abdu’l-Bahá explains: <span class="inlinequote">“That which was applicable to human needs during the early history of the race can neither meet nor satisfy the demands of this day, this period of newness and consummation.” He continues: “Man must now become imbued with new virtues and powers, new moral standards, new capacities…The gifts and blessings of the period of youth, although timely and sufficient during the adolescence of mankind, are now incapable of meeting the requirements of its maturity.”</span></p>
 
-            <p class="intro">Humanity is approaching its collective maturity. People are coming to understand that this is one planet with one people. We now have the capacity to create a global society founded on justice.
-</p>
+			<p class="intro">Bahá’ís are working to gradually realise this vision, with their friends, families and colleagues, by sharing sacred writings, studying spiritual teachings, and holding classes for teenagers and children.</p>
 
-            <p class="intro">The aim of the prophet of God is to raise man to the degree of knowledge of his potentiality and to illumine him through the light of the kingdom, to transform ignorance into wisdom, injustice into justice, error into knowledge, cruelty into affection and incapability into progress. In short, to make all the attainments of existence resplendent in him.</p>
-
-												<p class="intro">‘Abdu’l-Bahá explains: <span class="inlinequote">“That which was applicable to human needs during the early history of the race can neither meet nor satisfy the demands of this day, this period of newness and consummation.” He continues: “Man must now become imbued with new virtues and powers, new moral standards, new capacities…The gifts and blessings of the period of youth, although timely and sufficient during the adolescence of mankind, are now incapable of meeting the requirements of its maturity.”</span></p>
-
-												<p class="intro">Bahá’ís are working to gradually realise this vision, with their friends, families and colleagues, by sharing sacred writings, studying spiritual teachings, and holding classes for teenagers and children.</p>
-
-												<p class="intro">Bahá’u’lláh’s vision empowers individuals to take into their own hands the work of building a new civilization.</p>
-
-
-<!--
-            <p class="tags">
-			      <span>Tagged in </span>:
-				   <a href="#">orci</a>, <a href="#">lectus</a>, <a href="#">varius</a>, <a href="#">turpis</a>
-			   </p>
--->
-         </div>
-
-											<!-- Sub sections -->
-											<!--
-													<div>
-														<div class="col g-3 author-image">
-															<img src="images/portfolio/eve.jpg" alt="Sakura Haruno" />
-														</div>
-
-														<div class="col g-9 entry-title sub-entry-title">
-															<h6><a href="#">Building an ever advancing civilization</a></h6>
-															<p>At vero eos et accusamus et iusto odio dignissimos ducimus
-																<a href="#" class="more-link">More<i class="icon-angle-right"></i></a></p>
-														</div>
-													</div>
-												-->
-													<!-- End sub sections -->
-
-													<!-- Sub sections -->
-													<!--
-															<div>
-																<div class="col g-3 author-image">
-																	<img src="images/portfolio/clock.jpg" alt="Sakura Haruno" />
-																</div>
-
-																<div class="col g-9 entry-title sub-entry-title">
-																	<h6><a href="#">The Two fold moral purpose</a></h6>
-																	<p>At vero eos et accusamus et iusto odio dignissimos ducimus
-																		<a href="#" class="more-link">More<i class="icon-angle-right"></i></a></p>
-																</div>
-															</div>
-														-->
-															<!-- End sub sections -->
-															<div class="col quotecolumn">
-																<p class="intro quote" id="mainquote">"The best beloved of all things in My sight is Justice; turn not away therefrom if thou desirest Me, and neglect it not that I may confide in thee. By its aid thou shalt see with thine own eyes and through the eyes of others, and shalt know of thine own knowledge and not through the knowledge of thy neighbor. Ponder this in thy heart; how it behooveth thee to be. Verily justice is My gift to thee and the sign of My loving-kindness. Set it then before thine eyes." </p>
-																	<p class="manifestation">
-																		— ‘Abdu’l-Bahá
-																	</p>
-																</div>
-
-									</div>
-
-
-
-      </div>
-
-
-   </article> <!-- Post End -->
-
-
+			<p class="intro">Bahá’u’lláh’s vision empowers individuals to take into their own hands the work of building a new civilization.</p>
+				
+		</div>
+	</div>
+	<!--- Quote--->
+	<div class="container quote">
+		<!-- Entry -->
+		<div class="row quotecolumn">
+			<p class="intro quote" id="mainquote"><em>"The best beloved of all things in My sight is Justice; turn not away therefrom if thou desirest Me, and neglect it not that I may confide in thee. By its aid thou shalt see with thine own eyes and through the eyes of others, and shalt know of thine own knowledge and not through the knowledge of thy neighbor. Ponder this in thy heart; how it behooveth thee to be. Verily justice is My gift to thee and the sign of My loving-kindness. Set it then before thine eyes."</em> </p>
+			<p class="manifestation">
+				— ‘Abdu’l-Bahá
+			</p>
+		</div>
+	</div>
+	
+</section>
 
    <!-- footer
    ================================================== -->

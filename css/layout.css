@@ -1437,6 +1437,7 @@ footer .social-links li:first-child { margin-left: 0; }
 
    /* adjust font size */
    .intro, .testimonies .client-cite { font-size: 18px; }
+   em{font-size: 18px !important;}
 
    /* intro section
    -------------------------------------------------------------------- */
