@@ -126,6 +126,15 @@ properly.
 em{
    font-size:2rem !important;
 }
+.table-responsive {
+   overflow-x: auto;
+ }
+ 
+ .table {
+   width: 100%;
+   max-width: none;
+ }
+ 
 
 /* ================================================================== */
 
@@ -231,6 +240,7 @@ ul{
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 20px;
+    text-align: center;
 }
 .intro-head h2{
    color:#F6F4EF;
