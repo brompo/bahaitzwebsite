@@ -2027,6 +2027,6 @@ tr:hover {
 }
 
 caption, td, th {
-   text-align: left;
+   text-align: left !important;
    font-weight: 400;
 }
