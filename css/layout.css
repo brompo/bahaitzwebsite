@@ -25,9 +25,54 @@
 
 /* ================================================================== */
 
-.section-head h2 { font: 30px/42px montserrat-bold, sans-serif; }
+h2 { 
+   /*font: 30px/42px montserrat-bold, sans-serif; */
+   font-size: 30px;
+    line-height: 42px;
+    margin-bottom: 6px;
+    line-height: 2.7rem;
+    font-size: 2.25rem !important;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-inline: auto;
+    color: rgb(38, 35, 34);
+    margin-block: 0.5rem;
+    font-family: adobe-garamond-pro, Georgia, "Times New Roman", Times, serif !important;
+}
+h3{
+   line-height: 30px;
+    font-size: 22px;
+    line-height: 42px;
+    margin-bottom: 6px;
+    line-height: 2.7rem;
+    /* font-size: 2.25rem; */
+    max-width: 575px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-inline: auto;
+    /*margin-top:2rem !important;*/
+    letter-spacing: 1px;
+    color: rgb(38, 35, 34);
+    margin-block: 0.5rem;
+    font-family: adobe-garamond-pro, Georgia, "Times New Roman", Times, serif !important;
+}
 .desc { font: 14px/24px opensans-regular, sans-serif; }
-.intro { font: 20px/36px opensans-light, sans-serif; /*color:#565658;*/ color: #333233}
+.intro { 
+   font: 20px/36px opensans-light, sans-serif; /*color:#565658;*/ 
+   color: #333233;
+   font: 20px / 36px opensans-light, sans-serif;
+   /*
+   font-family: adobe-garamond-pro, Georgia, "Times New Roman", Times, serif;
+    font-weight: 400;
+   font-size: 1.2rem;
+    text-align: start;
+    margin-bottom: 20px;
+*/
+    /* font-family: adobe-garamond-pro, Georgia, "Times New Roman", Times, serif; */
+    /* color: #565658; */
+    /* color: #333233; */
+}
 
 /* Left clearing for flexible columns - columns that changes width in
 different screen sizes. Makes columns with different heights align
@@ -53,6 +98,14 @@ properly.
    margin: 0;
    padding: 0;
 }
+.lib-flexslider {
+   /*position: relative;*/ 
+   zoom: 1;
+   margin: 0;
+   padding: 0;
+   background: url(https://www.bahai.org/chrome/img/library/home-image-archives.jpg?e389b681) center no-repeat;
+   height: 450px;
+}
 .flexslider .slides { zoom: 1; }
 .flexslider .slides > li { position: relative; }
 
@@ -70,6 +123,18 @@ properly.
 .slides:after {
     clear: both;
 }
+em{
+   font-size:2rem !important;
+}
+.table-responsive {
+   overflow-x: auto;
+ }
+ 
+ .table {
+   width: 100%;
+   max-width: none;
+ }
+ 
 
 /* ================================================================== */
 
@@ -78,12 +143,10 @@ properly.
 /* ================================================================== */
 
 header {
-   height: 54px;
+   height: 80px;
    width: 100%;
    z-index: 99999;
-   background: url(../images/k-opacity-70.png);
-
-   position: fixed;
+   background: #8e673e url(../images/k-opacity-70.png);
    top: 0;
    left: 0;
 }
@@ -106,12 +169,49 @@ header .logo a {
    /*height: 18px;
    width: 91px;*/
    line-height: 18px;
-
-   position: absolute;
-   left: 12px;
-   top: 16px;
 }
 
+.iMzCzh {
+   width: 5.5rem;
+   height: 2rem;
+   background: transparent;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   display: flex;
+   gap: 12px;
+   -webkit-box-align: center;
+   align-items: center;
+   -webkit-box-pack: center;
+   justify-content: center;
+   user-select: none;
+}
+img.libraryimage{
+      height: 20px;
+      width: 20px;
+}
+a.librarylink{
+color:white !important;
+margin-left:10px;
+}
+.library{
+      display: flex;
+      align-items: center;
+      margin: 0 0 0 550px;
+      
+}
+ul{
+   float:right;
+}
+.navbar-toggler-icon{
+   height: 2.5em !important;
+   width:2.5em !important;
+   background: #fff;
+}
+
+.dropdown-item.active{
+   background-color: #8E673E !important;
+}
 /* primary navigation
 --------------------------------------------------------------------- */
 #nav-wrap ul, #nav-wrap li, #nav-wrap a {
@@ -120,23 +220,119 @@ header .logo a {
 	border: none;
 	outline: none;
 }
-
+.intro-head{
+   background: #25292D;
+   height: 80px;
+   width: 96%;
+    max-width: 1024px;
+    margin: 0 auto;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+.intro-head-inner{
+   background: #25292D;
+   width: 96%;
+    max-width: 1024px;
+    margin: 0 auto;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+.intro-head h2{
+   color:#F6F4EF;
+}
+.intro-head-inner h2{
+   color:#F6F4EF;
+}
+.intro-head-inner h3{
+   color:#0f9095;
+}
 /* nav-wrap */
-#nav-wrap {
-	position: relative;
-   font: 13px opensans-regular, sans-serif;
-   float: left;
+.mobile #nav-wrap {
+   /* position: relative;
+   top: -50px;
+   right: -109px; */
+   width: 250px;
+   margin: 0;
+   display: block;
+}
+
+#nav-wrap > a {
+   width: 48px;
+   height: 48px;
+   text-align: left;
+   /* background-color: #11ABB0; */
+   background-color: #8E673E;
+   position: absolute;
+   border: none;
+   float: right;
+   font: 0 / 0 a;
+   text-shadow: none;
+   color: transparent;
+}
+.mobile #nav-wrap:target > a:last-of-type {
+   display: block;
+}
+.mobile #nav-wrap > a:before, .mobile #nav-wrap > a:after {
+   position: absolute;
+   border: 2px solid #fff;
+   top: 35%;
+   left: 25%;
+   right: 25%;
+   content: '';
+}
+.mobile #nav-wrap > a:after {
+   top: 60%;
+}
+.mobile #nav-wrap > a:after {
+   position: absolute;
+   border: 2px solid #fff;
+   top: 60%;
+   left: 25%;
+   right: 25%;
+   content: '';
+}
+.mobile #nav-wrap:target > ul#nav {
+   display: block;
+   padding: 12px 25px 24px 25px;
+   background: #4c4e5a;
+   margin: 0;
+   clear: both;
+}
+.mobile #nav-wrap ul#nav li {
+   display: block;
+   width: 100%;
+   height: 100%;
+   text-align: left;
+}
+.mobile #nav-wrap ul#nav li {
+   border-bottom: 1px dotted #595B6A;
 }
 
 /* hide toggle button */
+
+a.mobile-btn{
+   display:none;
+
+}
 #nav-wrap > a { display: none; }
+#nav-wrap:not( :target ) > a:first-of-type{
+   display:block;
+}
+
 
 ul#nav {
    min-height: 54px;
    width: auto;
-
-   /* left align the menu */
    text-align: left;
+   display:none;
+   position: absolute;
+   right: 38%;
 }
 ul#nav li {
 	position: relative;
@@ -172,6 +368,19 @@ ul#nav li:hover > a,
 ul#nav li.active a { color: #11ABB0; }
 
 
+/*---------*/
+/*LIBRARY SECTION*/
+
+.row.entry-header {
+   /* text-align: center; */
+   display: grid !important;
+}
+
+
+
+/*-------*/
+
+
 
 /* ================================================================== */
 
@@ -179,10 +388,36 @@ ul#nav li.active a { color: #11ABB0; }
 
 /* ================================================================== */
 
+.container.quote {
+   margin-top: 40px;
+   margin-bottom: 40px;
+   /* text-align: right; */
+   /* margin-left: 0; */
+   /* width: 100%; */
+   /* float: right; */
+   /*background-color: #ddd6d6;*/
+   background-color:#e2e2e2;
+   /* margin-right: 0; */
+   max-width: none;
+   padding-bottom: 70px;
+   padding-top: 70px;
+}
+
 #intro {
    background: #111 url(../images/intro-bg.jpg) no-repeat center;
    overflow: hidden;
-   margin-top: 55px;
+   min-height:500px !important;
+}
+#libintro {
+   /*background: #111 url(../images/patterns/grey.png) center ;*/
+   overflow: hidden;
+   /*margin-top: 55px;*/
+}
+.books{
+   margin-top:10px;
+}
+.entry-title{
+   margin-top:10px;
 }
 
 /* FlexSlider Intro Slider Styles */
@@ -305,14 +540,25 @@ ul#nav li.active a { color: #11ABB0; }
 
 /* ================================================================== */
 
+.row.quotecolumn {
+   display: contents !important;
+}
+.row {
+   display: inline-flex !important;
+}
+
+
 #portfolio {
-   background: #f5f5f5 url(../images/patterns/grey.png);
+   /*background: #f5f5f5;*/
+   /*background:#e0d9d9;*/
    padding-top: 50px;
    padding-bottom: 50px;
+   text-align:center;
 }
 #portfolio .section-head h2 { /*color: #0f9095;*/ color:#323233;}
 #portfolio .section-head p.desc { color: #999999; }
 #portfolio .section-head .intro { /*color: #A3A3A3; color:#565658;*/ color: #333233}
+#portfolio .section-head .libintro a { /*color: #A3A3A3; color:#565658;*/ color: #333233}
 
 /* Portfolio Content */
 #portfolio-wrapper { margin-top: 36px; }
@@ -761,10 +1007,8 @@ ul#nav li.active a { color: #11ABB0; }
 /* ================================================================== */
 
 .post {
-   background: #f5f5f5 url(../images/patterns/grey.png);
    /*padding-top: 120px;*/
    padding-bottom: 90px;
-   margin-top:55px;
 }
 .post .entry-header {
    position: relative;
@@ -812,7 +1056,7 @@ ul#nav li.active a { color: #11ABB0; }
 
 /* post image */
 .post .post-image {
-  margin: 24px 0 24px 0;
+  margin: 24px 0 0 0;
   width: 100%;
 }
 
@@ -1210,6 +1454,7 @@ footer .social-links li:first-child { margin-left: 0; }
 
    /* adjust font size */
    .intro, .testimonies .client-cite { font-size: 18px; }
+   em{font-size: 18px !important;}
 
    /* intro section
    -------------------------------------------------------------------- */
@@ -1259,7 +1504,7 @@ footer .social-links li:first-child { margin-left: 0; }
 
    /* blog
    -------------------------------------------------------------------- */
-   .post, #blog-entries .post { padding-top: 10px; margin-top: 55px;}
+   /*.post, #blog-entries .post { padding-top: 10px; margin-top: 55px;}*/
    .post p.lead, #blog-entries .post .post-content p { font-size: 18px; }
    .post .entry-header h1 {
       padding-right: 18px;
@@ -1267,8 +1512,13 @@ footer .social-links li:first-child { margin-left: 0; }
 
    }
    .post .post-meta { margin-top: 6px; }
-   .post .post-image { margin: 12px 0 24px 0 }
+   .post .post-image { 
+      margin: 12px 0 24px 0; 
+      margin:0;
+      padding:0;
+   }
    .post .bio .about { padding-left: 18px; }
+   .library { margin: 0;}
 
 }
 
@@ -1289,8 +1539,12 @@ footer .social-links li:first-child { margin-left: 0; }
    /* mobile navigation
    -------------------------------------------------------------------- */
 
-   header.mobile { height: 55px; }
-   header.mobile .logo a { top: 22px; }
+/*   header.mobile { height: 55px; }*/
+   /*header.mobile . a { top: 22px; }*/
+
+   .navbar-logo{
+      width: 200px;
+   }
 
    .mobile #nav-wrap {
       position: absolute;
@@ -1304,7 +1558,7 @@ footer .social-links li:first-child { margin-left: 0; }
 		height: 48px;
 		text-align: left;
 		/*background-color: #11ABB0;*/
-  background-color:#8E673E;
+      background-color:#8E673E;
 		position: relative;
       border: none;
       float: right;
@@ -1355,6 +1609,7 @@ footer .social-links li:first-child { margin-left: 0; }
       background: #4c4e5a;
       margin: 0;
       clear: both;
+      width:200px;
    }
    .mobile #nav-wrap ul#nav li { border-bottom: 1px dotted #595B6A; }
    .mobile #nav-wrap ul#nav li a {
@@ -1377,6 +1632,26 @@ footer .social-links li:first-child { margin-left: 0; }
    .slides {
       overflow: hidden;
       min-height: 300px;
+   }
+   .intro-head {
+      overflow: hidden;
+      width: auto;
+   }
+   .intro-head-inner {
+      overflow: hidden;
+      width: auto;
+   }
+   .intro-head h2{
+      font-size: 25px !important;
+   }
+   .intro-head-inner h2{
+      font-size: 25px !important;
+   }
+   .intro-head-inner h3{
+      font-size: 18px !important;
+   }
+   .lib-flexslider{
+      height:300px;
    }
 
    /* portfolio section
@@ -1584,6 +1859,7 @@ footer .social-links li:first-child { margin-left: 0; }
       float: none;
    }
    footer .social-links { margin-top: 12px; }
+   .library{margin:0;}
 
 }
 
@@ -1607,6 +1883,7 @@ footer .social-links li:first-child { margin-left: 0; }
      font-size: 28px;
      line-height: 36px;
    }
+   .library{margin:0;}
 
 }
 
@@ -1629,9 +1906,13 @@ footer .social-links li:first-child { margin-left: 0; }
 .quotecolumn{
  text-align: center;
 }
+.libquotecolumn{
+ text-align: center;
+ border-right: solid #0B686B;
+}
 
 header.mobile-static{
- position: absolute !important;
+ /*position: absolute !important;*/
 }
 
 .paragraph-bold{
@@ -1642,4 +1923,110 @@ header.mobile-static{
 .inlinequote{
  font-style: italic;
  font-weight: bolder;
+}
+
+
+/* ================================================================== */
+
+/* Library Tabel
+
+/* ================================================================== */
+/* Common styles */
+#portfolio .listingtable {
+   padding: 40px 0 0 0;
+}
+
+#portfolio .listingtable table {
+   clear: both;
+   border: 1px solid #dfdcd8;
+   font-size: 1.4rem;
+   line-height: 120%;
+   width: 100%;
+   border-collapse: separate;
+   table-layout: fixed;
+}
+
+#portfolio .listingtable table th {
+   position: relative;
+   border-color: #fff;
+   background: #efefef;
+   padding-top: 10px;
+   padding-bottom: 7px;
+   color: #0f9095;
+}
+
+table tr td {
+   border-top: 2px solid #fff;
+   vertical-align: top;
+}
+
+td, th {
+   padding: 4px 10px 4px 5px;
+   text-align: left;
+   border-bottom: 1px solid #ddd;
+}
+
+th {
+   font-weight: 700;
+   background-color: #f2f2f2;
+}
+
+tr:hover {
+   background-color: #f5f5f5;
+}
+
+/* Media queries for smaller screens */
+@media only screen and (max-width: 768px) {
+   #portfolio .listingtable table,
+   #portfolio .listingtable thead,
+   #portfolio .listingtable tbody,
+   #portfolio .listingtable th,
+   #portfolio .listingtable td,
+   #portfolio .listingtable tr {
+       display: block;
+   }
+
+   #portfolio .listingtable thead tr {
+       position: absolute;
+       top: -9999px;
+       left: -9999px;
+   }
+
+   #portfolio .listingtable tr {
+       margin-bottom: 20px;
+       border: 1px solid #ccc;
+   }
+
+   #portfolio .listingtable td {
+       border: none;
+       position: relative;
+       /* padding-left: 50%; */
+   }
+
+   #portfolio .listingtable td:before {
+       position: absolute;
+       top: 6px;
+       left: 6px;
+       width: 45%;
+       padding-right: 10px;
+       white-space: nowrap;
+   }
+
+   /* #portfolio .listingtable td:nth-of-type(1):before {
+       content: "Dated: ";
+   }
+
+   #portfolio .listingtable td:nth-of-type(2):before {
+       content: "Adressed to: ";
+   } */
+
+   #portfolio .listingtable td:nth-of-type(3):before {
+       content: "Summary of Content: ";
+   }
+   .library{margin:0;}
+}
+
+caption, td, th {
+   text-align: left !important;
+   font-weight: 400;
 }
