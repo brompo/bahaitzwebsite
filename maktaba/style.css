@@ -1190,7 +1190,7 @@ th{
 
 @media only screen and (max-width: 765px) {
   section#billboard{
-    /*height: 100vh !important;*/
+    height: 95vh !important;
   }
 }
 
