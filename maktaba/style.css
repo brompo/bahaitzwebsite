@@ -150,6 +150,9 @@ hr{
 .navbar-brand{
   max-width:75%;
 }
+.swiper-button-lock{
+  display: block !important;
+}
 
 /* - Section Padding
 --------------------------------------------------------------*/
