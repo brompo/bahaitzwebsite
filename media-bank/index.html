@@ -53,46 +53,41 @@
 
     <header id="header" class="site-header">
       <nav id="header-nav" class="navbar navbar-expand-lg py-3">
-        <div class="container">
-          <a class="navbar-brand" href="../">
-            <img src="./images/logo.png" class="logo">
-          </a>
-          <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
-            <svg class="navbar-icon">
-              <use xlink:href="#navbar-icon"></use>
-            </svg>
-          </button>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
-            <div class="offcanvas-header px-4 pb-0">
+          <div class="container">
               <a class="navbar-brand" href="../">
-                <img src="images/logo.png" class="logo">
+                  <img src="./images/logo.png" class="logo header-nav-logo">
               </a>
-              <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close"
-                data-bs-target="#bdNavbar"></button>
+              <div class="dropdown d-lg-none order-3">
+                <button class="navbar-toggler " type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="navbar-toggler-icon "></span>
+
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="../">Home</a></li>
+                <li><a class="dropdown-item" href="./maktaba">Library</a></li>
+                <li><a class="dropdown-item" href="#mawasiliano">Contact</a></li>
+              </ul>
             </div>
-            <div class="offcanvas-body">
-              <ul id="navbar "
-                class="navbar-nav text-uppercase justify-content-end justify-content-lg-end align-items-end align-items-lg-end flex-grow-1">
-                <li class="nav-item">
-                  <a class="nav-link me-4 active" href="../">Home</a>
-                </li>
-                
-                <li class="nav-item">
-                  <a class="nav-link me-4" href="#mawasiliano">Contact</a>
-                </li>
+              
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul id="navbar" class="navbar-nav text-uppercase justify-content-end flex-grow-1">
+                  <li class="nav-item">
+                      <a class="nav-link me-4 active" href="../">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link me-4" href="./maktaba">Library</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link me-4" href="#mawasiliano">Contact</a>
+                  </li>
               </ul>
               <div class="user-items d-flex">
-                <ul class="d-flex justify-content-end list-unstyled mb-0">
-
-                </ul>
+                  <ul class="d-flex justify-content-end list-unstyled mb-0"></ul>
               </div>
-            </div>
           </div>
         </div>
       </nav>
-
-    </header>
+  </header>
 
 
     <section class="hero-section bg-light py-5">
@@ -266,6 +261,40 @@
               <div class="review-content d-flex">
                 <p class="my-2 me-2 fs-6 text-black-50">
                   Images of individuals and groups from around the world in the state of prayer and worship, including reading from sacred texts
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4 border-0 rounded-3 position-relative">
+          <div class="swiper-slide slide-categories">
+            <div class="card position-relative p-4 border rounded-3">
+              <a href="../library/authoritative-texts/the-universal-house-of-justice/books/RIDVAN 2024.pdf">
+              <img src="#" class="img-fluid shadow-sm" alt="Media item">
+              <h6 class="mt-4 mb-0 fw-bold">Participation in the Discourses of Society</h6>
+              </a>
+              <div class="review-content d-flex">
+                <p class="my-2 me-2 fs-6 text-black-50">
+                  Images of Bahá’ís alongside others in forums and discussions concerned with aspects of humanity’s wellbeing and progress
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4 border-0 rounded-3 position-relative">
+          <div class="swiper-slide slide-categories">
+            <div class="card position-relative p-4 border rounded-3">
+              <a href="../library/authoritative-texts/the-universal-house-of-justice/books/RIDVAN 2024.pdf">
+              <img src="#" class="img-fluid shadow-sm" alt="Media item">
+              <h6 class="mt-4 mb-0 fw-bold">Social Action</h6>
+              </a>
+              <div class="review-content d-flex">
+                <p class="my-2 me-2 fs-6 text-black-50">
+                  Photos of activities directed towards the social and economic advancement of communities
                 </p>
               </div>
             </div>
