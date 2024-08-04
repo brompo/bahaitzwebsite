@@ -128,7 +128,7 @@ a:hover {
 }
 hr{
   margin: 1.25rem 0;
-  color: var(--gray-color-200);
+  color: var(--light-color);
   opacity: 1;
 }
 
@@ -226,7 +226,8 @@ hr{
 /* 2.2 Section Title
 /*----------------------------------------------*/
 h1 {
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
+  font-weight: bolder;
 }
 h2,
 h3,
@@ -238,11 +239,13 @@ h6 {
   letter-spacing: 0.03em;
   font-weight: 600;
   line-height: 115%;
+  color:var(--light-black-color) !important;
 }
 h4,
 h5,
-h6 {
-  color: var(--light-black-color);
+h6,
+p {
+  color: var(--light-black-color) !important;
 }
 
 h1{
@@ -1325,6 +1328,24 @@ th{
 
 /* 4.9 Footer
 /*----------------------------------------------*/
+footer{
+  background: #8e673e url(../images/k-opacity-70.png);
+}
+.footer-menu h5 {
+  color: var(--light-color) !important;
+}
+#mawasiliano .footer-menu .footer-description {
+  color:var(--light-color) !important;
+}
+footer a{
+  color:var(--primary-color);
+}
+footer h5{
+  font-weight: 700;
+}
+#mawasiliano .copyright .footer-description {
+  color: var(--light-color) !important;
+}
 #footer .menu-list .menu-item a{
   font-size: 0.7619em;
   font-weight: 300;
@@ -1332,14 +1353,12 @@ th{
   color: var(--black-color);
 }
 
+
 #footer .menu-list .menu-item a:hover{
   color: var(--primary-color);
 }
 
-#mawasiliano .footer-menu .footer-logo {
-  background: black;
-  border-radius: 40px;
-}
+
 .social-links svg {
   width: 20px;
   height: 20px;

@@ -200,6 +200,13 @@ margin-left:10px;
       margin: 0 0 0 550px;
       
 }
+.bank{
+   margin: 0 .5rem 0 .5rem;
+}
+.bank .banklink{
+   color:white !important;
+   margin-left:  0.5rem; 
+}
 ul{
    float:right;
 }
