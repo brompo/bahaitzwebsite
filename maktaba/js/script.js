@@ -169,9 +169,33 @@
 
     }); // End of a document ready
 
-    window.addEventListener("load", function () {
+    // window.addEventListener("load", function () {
+    //   const preloader = document.getElementById("preloader");
+    //   preloader.classList.add("hide-preloader");
+    // });
+
+    function hidePreloader() {
       const preloader = document.getElementById("preloader");
       preloader.classList.add("hide-preloader");
-    });
+    }
+
+    // Observe LCP event
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((entryList) => {
+        const entries = entryList.getEntries();
+        for (const entry of entries) {
+          if (entry.element && entry.element.id === 'billboard') {
+            hidePreloader();
+            observer.disconnect();
+            break;
+          }
+        }
+      });
+
+      observer.observe({ type: 'largest-contentful-paint', buffered: true });
+    } else {
+      // Fallback if PerformanceObserver is not supported
+      window.addEventListener("load", hidePreloader);
+    }
 
 })(jQuery);
