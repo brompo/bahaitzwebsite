@@ -176,7 +176,21 @@
 
     function hidePreloader() {
       const preloader = document.getElementById("preloader");
-      preloader.classList.add("hide-preloader");
+      if (preloader) {
+        preloader.classList.add("hide-preloader");
+        console.log("Preloader hidden");
+        sessionStorage.setItem("preloaderHidden", "true");
+      } else {
+        console.log("Preloader element not found");
+      }
+    }
+
+    // Function to check preloader state
+    function checkPreloaderState() {
+      const preloaderHidden = sessionStorage.getItem("preloaderHidden");
+      if (preloaderHidden === "true") {
+        hidePreloader();
+      }
     }
 
     // Observe LCP event
@@ -184,7 +198,9 @@
       const observer = new PerformanceObserver((entryList) => {
         const entries = entryList.getEntries();
         for (const entry of entries) {
+          console.log("LCP entry:", entry);
           if (entry.element && entry.element.id === 'billboard') {
+            console.log("Hero element is LCP");
             hidePreloader();
             observer.disconnect();
             break;
@@ -197,5 +213,20 @@
       // Fallback if PerformanceObserver is not supported
       window.addEventListener("load", hidePreloader);
     }
+        // Check preloader state on page load
+    document.addEventListener("DOMContentLoaded", checkPreloaderState);
+
+    // Page Visibility API
+    document.addEventListener("visibilitychange", function() {
+      if (document.visibilityState === "visible") {
+        checkPreloaderState();
+      }
+    });
+
+    // Fallback mechanism
+    window.addEventListener("load", function() {
+      console.log("Window load event triggered");
+      hidePreloader();
+    });
 
 })(jQuery);
