@@ -1,4 +1,5 @@
-[
+{
+  "nyumbayahaki": [
     {
         "title": "Ridvan 1996",
         "description": "Barua ya 1996 Barani Africa",
@@ -191,4 +192,14 @@
       "link": "../../../library/authoritative-texts/the-universal-house-of-justice/books/RIDVAN 2024.pdf",
       "image": "../../images/nyumbayahaki/Warakawa28Novemba2023.webp"
     }
-]
+  ],
+
+  "kujiimarisha": [
+    {
+      "title": "Agano",
+      "description": "",
+      "link": "../../vitabu/kujiimarisha/agano.pdf",
+      "image": "../../images/kujiimarisha/agano.webp"
+    }
+  ]
+}
