@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     category = 'nyumbayahaki';
   } else if (path.includes('kujiimarisha')) {
     category = 'kujiimarisha';
+  } else if (path.includes('historia')) {
+    category = 'historia';
   }
 
   if (category) {

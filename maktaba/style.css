@@ -1362,6 +1362,21 @@ th{
   letter-spacing: 0.09em;
   color: var(--black-color);
 }
+footer {
+  background: #8e673e url(../images/k-opacity-70.png);
+}
+.footer-menu h5 {
+  color: var(--light-color) !important;
+}
+#mawasiliano .footer-menu .footer-description {
+  color: var(--light-color) !important;
+}
+footer a {
+  color: var(--primary-color);
+}
+#mawasiliano .copyright .footer-description {
+  color: var(--light-color) !important;
+}
 #footer .menu-list .menu-item a:hover{
   color: var(--primary-color);
 }
