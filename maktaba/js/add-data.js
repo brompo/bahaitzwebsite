@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="card mb-4 border-0 rounded-3 position-relative">
               <div class="swiper-slide slide-categories">
                 <div class="card position-relative p-4 border rounded-3">
-                  <a href="${book.link}" target="_blank" rel="noopener noreferrer">
+                  <a href="${book.link}#toolbar=0" target="_blank" rel="noopener noreferrer">
                     <img src="${book.image}" class="img-fluid shadow-sm" alt="${book.title}">
                     <h6 class="mt-4 mb-0 fw-bold">${book.title}</h6>
                   </a>
