@@ -4,7 +4,7 @@ function getPDFUrlFromQuery() {
     return urlParams.get('file');
   }
   
-  // Function to render the PDF using PDF.js
+  // Function to render the PDF using PDF.js in sequence (ordered)
   function renderPDF(url) {
     const pdfContainer = document.getElementById('pdf-viewer');
     pdfContainer.innerHTML = ''; // Clear previous content
@@ -13,9 +13,12 @@ function getPDFUrlFromQuery() {
     loadingTask.promise.then(function(pdf) {
       console.log('PDF loaded');
   
-      for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+      const numPages = pdf.numPages;
+  
+      // Sequential rendering of pages to ensure proper order
+      function renderPage(pageNum) {
         pdf.getPage(pageNum).then(function(page) {
-          const scale = 1.5;  // Adjust the scale to change the size of the rendered PDF
+          const scale = 1.5; // Adjust the scale to change the size of the rendered PDF
           const viewport = page.getViewport({ scale: scale });
   
           const canvas = document.createElement('canvas');
@@ -31,10 +34,18 @@ function getPDFUrlFromQuery() {
           const renderTask = page.render(renderContext);
           renderTask.promise.then(function() {
             console.log(`Page ${pageNum} rendered`);
-            pdfContainer.appendChild(canvas);
+            pdfContainer.appendChild(canvas); // Append the canvas to the container
+  
+            // Render the next page if it exists
+            if (pageNum < numPages) {
+              renderPage(pageNum + 1); // Render next page
+            }
           });
         });
       }
+  
+      // Start rendering the first page
+      renderPage(1);
     }).catch(function(error) {
       console.error('Error rendering PDF:', error);
     });
