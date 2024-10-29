@@ -8,7 +8,7 @@
    <!--- Basic Page Needs
    ================================================== -->
 	<meta charset="utf-8">
-	<title>Worshiping God</title>
+	<title>Kuabudu Mungu</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -22,7 +22,8 @@
 	<link rel="stylesheet" href="css/layout.css">
 
 	<!-- Adding Bootstrap 14 Apr 2024:Brian-Ceasar-->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 
 	<!--[if lt IE 9]>
@@ -40,48 +41,105 @@
 
 <!-- Header
 ================================================== -->
-<header class="mobile mobile-static">
-	<nav class="navbar navbar-expand navbar-light">
+<header id="header" class="site-header">
+    <nav id="header-nav" class="navbar navbar-expand-lg py3">
 		<div class="container">
 			<!-- Logo -->
-			<a class="navbar-brand navbar-logo" href="#"><img alt="" src="images/logo.png"></a>
+			<a class="navbar-brand navbar-logo" href="#">
+				<img alt="" src="images/logo.png" class="logo header-nav-logo"> 
+			</a>
+
+			<div class="dropdown d-lg-none order-3">
+				<button class="navbar-toggler " type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+				  <span class="navbar-toggler-icon "></span>
 	
-			<!-- Navbar Toggler Button for Mobile -->
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon " ></span>
-			</button>
-	
-			<!-- Library Link -->
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item library">
-					<img class="libraryimage" src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNy44MiAyNy44MiI+PGRlZnM+PHN0eWxlPi5jbHMtMSB7b3BhY2l0eTogMC45O30uY2xzLTIge29wYWNpdHk6IDAuNjt9LmNscy0zIHtvcGFjaXR5OiAwLjM7fS5jbHMtMSwuY2xzLTIsLmNscy0zIHtmaWxsOiAjM2UzOTM4O2lzb2xhdGlvbjogaXNvbGF0ZTt9PC9zdHlsZT48L2RlZnM+PGcgaWQ9IklDTl9BbGxfU2l0ZXNfIiBkYXRhLW5hbWU9IklDTiBBbGwgU2l0ZXMgIj48cmVjdCBpZD0iUmVjaHRlY2tfMTAxMSIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDExIiBjbGFzcz0iY2xzLTEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTIiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxMiIgY2xhc3M9ImNscy0xIiB4PSIxMC4wOSIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxMyIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDEzIiBjbGFzcz0iY2xzLTEiIHg9IjIwLjE3IiB3aWR0aD0iNy44NCIgaGVpZ2h0PSI3Ljc5IiAvPjxyZWN0IGlkPSJSZWNodGVja18xMDE0IiBkYXRhLW5hbWU9IlJlY2h0ZWNrIDEwMTQiIGNsYXNzPSJjbHMtMiIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTUiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNSIgY2xhc3M9ImNscy0xIiB4PSIxMC4wOSIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTYiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNiIgY2xhc3M9ImNscy0yIiB4PSIyMC4xNyIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTciIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNyIgY2xhc3M9ImNscy0zIiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxOCIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDE4IiBjbGFzcz0iY2xzLTMiIHg9IjEwLjA5IiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxOSIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDE5IiBjbGFzcz0iY2xzLTMiIHg9IjIwLjE3IiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48L2c+PC9zdmc+">
-						<a class="nav-link librarylink" href="./library">Maktaba</a>
-					</li>
-			</ul>
-	
+				</button>
+				
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				  <li><a class="dropdown-item" href="#intro">Mwanzoni</a></li>
+				  <li><a class="dropdown-item" href="kusudi.html">Kusudi la Maisha Yetu</a></li>
+				  <li><a class="dropdown-item" href="jumuiya.html">Kujenga Jumuiya</a></li>
+				  <li><a class="dropdown-item" href="familia.html">Maisha ya Familia</a></li>
+				  <li><a class="dropdown-item" href="sayansinadini.html">Sayansi na Dini</a></li>
+				  
+				</ul>
+			</div>
+
 			<!-- Navbar Content -->
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav ml-auto">
-					<!-- Navigation Links -->
-					<li class="nav-item dropdown" style="background: #8E673E; border-radius:10px;">
+				<ul id="navbar" class="navbar-nav text-uppercase justify-content-end flex-grow-1">
+					<li class="nav-item">
+						<a class="nav-link me-4 active" href="#">Nyumbani</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link me-4" href="./maktaba">Maktaba</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link me-4" href="./media-bank/">Picha</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link me-4 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+						  aria-expanded="true">Mada</a>
+						<ul class="dropdown-menu animate slide border">
+						  <li>
+							<a href="kusudi.html" class="dropdown-item fw-light">Kusudi la Maisha Yetu</a>
+						  </li>
+						  <li>
+							<a href="jumuiya.html" class="dropdown-item fw-light">Kujenga Jumuiya</a>
+						  </li>
+						  <li>
+							<a href="familia.html" class="dropdown-item fw-light">Maisha ya familia</a>
+						  </li>
+						  <li>
+							<a href="sayansinadini.html" class="dropdown-item fw-light">Sayansi na Dini</a>
+						  </li>
+						</ul>
+					  </li>
+
+					<!-- <li class="nav-item dropdown" style="background: #8E673E; border-radius:10px;">
 						<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<!-- Hamburger Icon -->
+							
 							<span class="navbar-toggler-icon"></span>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="index.html">Mwanzoni</a>
+							<a class="dropdown-item active" href="#intro">Mwanzoni</a>
 							<a class="dropdown-item" href="kusudi.html">Kusudi la Maisha Yetu</a>
 							<a class="dropdown-item" href="jumuiya.html">Kujenga Jumuiya</a>
-							<a class="dropdown-item active" href="#familia">Maisha ya Familia</a>
+							<a class="dropdown-item" href="familia.html">Maisha ya Familia</a>
 							<a class="dropdown-item" href="sayansinadini.html">Sayansi na Dini</a>
 						</div>
-					</li>
+					</li> -->
 				</ul>
+				<div class="user-items d-flex">
+					<ul class="d-flex justify-content-end list-unstyled mb-0"></ul>
+				</div>
 			</div>
+	
+			<!-- Navbar Toggler Button for Mobile -->
+			<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon " ></span>
+			</button> -->
+	
+			<!-- Library Link -->
+			<!-- <ul class="navbar-nav ml-auto">
+				<li class="nav-item library">
+					<img class="libraryimage" src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNy44MiAyNy44MiI+PGRlZnM+PHN0eWxlPi5jbHMtMSB7b3BhY2l0eTogMC45O30uY2xzLTIge29wYWNpdHk6IDAuNjt9LmNscy0zIHtvcGFjaXR5OiAwLjM7fS5jbHMtMSwuY2xzLTIsLmNscy0zIHtmaWxsOiAjM2UzOTM4O2lzb2xhdGlvbjogaXNvbGF0ZTt9PC9zdHlsZT48L2RlZnM+PGcgaWQ9IklDTl9BbGxfU2l0ZXNfIiBkYXRhLW5hbWU9IklDTiBBbGwgU2l0ZXMgIj48cmVjdCBpZD0iUmVjaHRlY2tfMTAxMSIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDExIiBjbGFzcz0iY2xzLTEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTIiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxMiIgY2xhc3M9ImNscy0xIiB4PSIxMC4wOSIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxMyIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDEzIiBjbGFzcz0iY2xzLTEiIHg9IjIwLjE3IiB3aWR0aD0iNy44NCIgaGVpZ2h0PSI3Ljc5IiAvPjxyZWN0IGlkPSJSZWNodGVja18xMDE0IiBkYXRhLW5hbWU9IlJlY2h0ZWNrIDEwMTQiIGNsYXNzPSJjbHMtMiIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTUiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNSIgY2xhc3M9ImNscy0xIiB4PSIxMC4wOSIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTYiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNiIgY2xhc3M9ImNscy0yIiB4PSIyMC4xNyIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTciIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNyIgY2xhc3M9ImNscy0zIiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxOCIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDE4IiBjbGFzcz0iY2xzLTMiIHg9IjEwLjA5IiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxOSIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDE5IiBjbGFzcz0iY2xzLTMiIHg9IjIwLjE3IiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48L2c+PC9zdmc+">
+						<a class="nav-link librarylink" href="./maktaba">Maktaba</a>
+				</li>
+
+				
+			</ul>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item bank">
+					<a class="nav-link banklink" href="./media-bank/">Picha</a>
+				</li>
+			</ul> -->
+	
+			
 		</div>
 	</nav>
-
-</header> 
+	
+</header>
 <!-- Header End -->
 
    <!-- Intro Section
@@ -98,17 +156,17 @@
 <section id="portfolio">
 	<div class="container">
 		<div class="row section-head">
-			<h2>Worshiping God</h2>
-            <p class="intro">Service and worship are at the heart of the pattern of community life that Bahá’ís around the world are trying to bring into being. They are two distinct, yet inseparable elements that propel the life of the community forward. ‘Abdu’l-Bahá writes that, <span clear="inlinequote">Success and prosperity depend upon service to and worship of God”.</span> </p>
-            <p class="intro">Prayer is integral to Bahá’í life, whether at the level of the individual, the community, or the institutions. Bahá’ís turn their hearts in prayer to God repeatedly throughout the day—imploring His assistance, supplicating Him on behalf of loved ones, offering praise and gratitude, and seeking divine confirmations and guidance. In addition, meetings of consultation and gatherings where friends have come together to undertake one or another project commonly begin and end with prayers.</p>
-			<p class="intro">The integration of devotion and service finds expression in the institution of the Mashriqu’l-Adhkár. The structure comprises a central building that forms the focal point of worship in a geographical area, and dependencies dedicated to the provision of education, healthcare and other services concerned with the social and economic progress of the community. Although there are but a few Mashriqu’l-Adhkárs in the world today, the seeds for their eventual establishment are being planted in an increasing number of communities, and in the future every locality will benefit from such a physical structure.</p>
+			<h2>Kuabudu Mungu</h2>
+            <p class="intro">Utumishi na ibada ni kiini cha mtindo wa maisha ya jumuiya ambayo Wabahá’í kote ulimwenguni wanajaribu kuleta. Ni mambo mawili tofauti, lakini hayatenganishwi ambayo yanasukuma mbele maisha ya jamii. ‘Abdu’l-Bahá anaandika kwamba, <span clear="inlinequote">Mafanikio na ustawi hutegemea utumishi na kumwabudu Mungu”.</span> </p>
+            <p class="intro">Sala ni muhimu kwa maisha ya Bahá’í, iwe katika ngazi ya mtu binafsi, jumuiya, au taasisi. Wabahá’í hugeuza mioyo yao katika maombi kwa Mungu mara kwa mara siku nzima—wakiomba msaada Wake, wakimwomba kwa niaba ya wapendwa wao, wakitoa sifa na shukrani, na kutafuta uthibitisho na mwongozo wa kiungu. Kwa kuongezea, mikutano ya mashauriano na mikusanyiko ambapo marafiki wamekusanyika ili kufanya mradi mmoja au mwingine kwa kawaida huanza na kumalizika kwa maombi.</p>
+			<p class="intro">Kuunganishwa kwa ibada na huduma kunaonekana katika taasisi ya Mashriqu'l-Adhkár. Muundo huu unajumuisha jengo kuu ambalo linaunda kitovu cha ibada katika eneo la kijiografia, na tegemezi zinazotolewa kwa utoaji wa elimu, huduma za afya na huduma zingine zinazohusika na maendeleo ya kijamii na kiuchumi ya jamii. Ingawa kuna Mashriqu’l-Adhkárs wachache duniani leo, mbegu za kuanzishwa kwao hatimaye zinapandwa katika idadi inayoongezeka ya jumuiya, na katika siku zijazo kila eneo litafaidika kutokana na muundo huo halisi.</p>
 		</div>
 	</div>
 	<!--- Quote--->
 	<div class="container quote">
 		<!-- Entry -->
 		<div class="row quotecolumn">
-			<p class="intro quote" id="mainquote"><em>“Gather ye together with the utmost joy and fellowship and recite the verses revealed by the merciful Lord. By so doing the doors to true knowledge will be opened to your inner beings, and ye will then feel your souls endowed with steadfastness and your hearts filled with radiant joy.”</em> </p>
+			<p class="intro quote" id="mainquote"><em>“Kusanyikeni kwa furaha na ushirika wa hali ya juu na msome Aya zilizoteremshwa na Mola Mlezi wa rehema. Kwa kufanya hivyo milango ya maarifa ya kweli itafunguliwa kwa nafsi zenu za ndani, na ndipo mtahisi nafsi zenu zimejaaliwa uthabiti na mioyo yenu iliyojaa shangwe nyororo.”</em> </p>
 			<p class="manifestation">
 				— Bahá’u’lláh
 			</p>
@@ -148,7 +206,9 @@
    	<!-- Adding support to Bootstrap-->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+	crossorigin="anonymous"></script>
 	
 
 </body>

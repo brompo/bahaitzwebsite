@@ -22,7 +22,8 @@
 	<link rel="stylesheet" href="css/layout.css">
 
 	<!-- Adding Bootstrap 13 Apr 2024:Brian-->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 	
 	<!--[if lt IE 9]>
@@ -40,49 +41,105 @@
 
 <!-- Header
 ================================================== -->
-   <header class="mobile mobile-static">
-
-	<nav class="navbar navbar-expand navbar-light">
+<header id="header" class="site-header">
+    <nav id="header-nav" class="navbar navbar-expand-lg py3">
 		<div class="container">
 			<!-- Logo -->
-			<a class="navbar-brand navbar-logo" href="index.html"><img alt="" src="images/logo.png"></a>
+			<a class="navbar-brand navbar-logo" href="#">
+				<img alt="" src="images/logo.png" class="logo header-nav-logo"> 
+			</a>
+
+			<div class="dropdown d-lg-none order-3">
+				<button class="navbar-toggler " type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+				  <span class="navbar-toggler-icon "></span>
 	
-			<!-- Navbar Toggler Button for Mobile -->
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon " ></span>
-			</button>
-	
-			<!-- Library Link -->
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item library">
-					<img class="libraryimage" src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNy44MiAyNy44MiI+PGRlZnM+PHN0eWxlPi5jbHMtMSB7b3BhY2l0eTogMC45O30uY2xzLTIge29wYWNpdHk6IDAuNjt9LmNscy0zIHtvcGFjaXR5OiAwLjM7fS5jbHMtMSwuY2xzLTIsLmNscy0zIHtmaWxsOiAjM2UzOTM4O2lzb2xhdGlvbjogaXNvbGF0ZTt9PC9zdHlsZT48L2RlZnM+PGcgaWQ9IklDTl9BbGxfU2l0ZXNfIiBkYXRhLW5hbWU9IklDTiBBbGwgU2l0ZXMgIj48cmVjdCBpZD0iUmVjaHRlY2tfMTAxMSIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDExIiBjbGFzcz0iY2xzLTEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTIiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxMiIgY2xhc3M9ImNscy0xIiB4PSIxMC4wOSIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxMyIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDEzIiBjbGFzcz0iY2xzLTEiIHg9IjIwLjE3IiB3aWR0aD0iNy44NCIgaGVpZ2h0PSI3Ljc5IiAvPjxyZWN0IGlkPSJSZWNodGVja18xMDE0IiBkYXRhLW5hbWU9IlJlY2h0ZWNrIDEwMTQiIGNsYXNzPSJjbHMtMiIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTUiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNSIgY2xhc3M9ImNscy0xIiB4PSIxMC4wOSIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTYiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNiIgY2xhc3M9ImNscy0yIiB4PSIyMC4xNyIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTciIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNyIgY2xhc3M9ImNscy0zIiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxOCIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDE4IiBjbGFzcz0iY2xzLTMiIHg9IjEwLjA5IiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxOSIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDE5IiBjbGFzcz0iY2xzLTMiIHg9IjIwLjE3IiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48L2c+PC9zdmc+">
-						<a class="nav-link librarylink" href="./library">Maktaba</a>
-					</li>
-			</ul>
-	
+				</button>
+				
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				  <li><a class="dropdown-item" href="#intro">Mwanzoni</a></li>
+				  <li><a class="dropdown-item" href="kusudi.html">Kusudi la Maisha Yetu</a></li>
+				  <li><a class="dropdown-item" href="jumuiya.html">Kujenga Jumuiya</a></li>
+				  <li><a class="dropdown-item" href="familia.html">Maisha ya Familia</a></li>
+				  <li><a class="dropdown-item" href="sayansinadini.html">Sayansi na Dini</a></li>
+				  
+				</ul>
+			</div>
+
 			<!-- Navbar Content -->
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav ml-auto">
-					<!-- Navigation Links -->
-					<li class="nav-item dropdown" style="background: #8E673E; border-radius:10px;">
+				<ul id="navbar" class="navbar-nav text-uppercase justify-content-end flex-grow-1">
+					<li class="nav-item">
+						<a class="nav-link me-4 active" href="./">Nyumbani</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link me-4" href="./maktaba">Maktaba</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link me-4" href="./media-bank/">Picha</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link me-4 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+						  aria-expanded="true">Mada</a>
+						<ul class="dropdown-menu animate slide border">
+						  <li>
+							<a href="kusudi.html" class="dropdown-item fw-light">Kusudi la Maisha Yetu</a>
+						  </li>
+						  <li>
+							<a href="jumuiya.html" class="dropdown-item fw-light">Kujenga Jumuiya</a>
+						  </li>
+						  <li>
+							<a href="familia.html" class="dropdown-item fw-light">Maisha ya familia</a>
+						  </li>
+						  <li>
+							<a href="sayansinadini.html" class="dropdown-item fw-light">Sayansi na Dini</a>
+						  </li>
+						</ul>
+					  </li>
+
+					<!-- <li class="nav-item dropdown" style="background: #8E673E; border-radius:10px;">
 						<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<!-- Hamburger Icon -->
+							
 							<span class="navbar-toggler-icon"></span>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="index.html">Mwanzoni</a>
+							<a class="dropdown-item active" href="#intro">Mwanzoni</a>
 							<a class="dropdown-item" href="kusudi.html">Kusudi la Maisha Yetu</a>
-							<a class="dropdown-item active" href="#jumuiya">Kujenga Jumuiya</a>
+							<a class="dropdown-item" href="jumuiya.html">Kujenga Jumuiya</a>
 							<a class="dropdown-item" href="familia.html">Maisha ya Familia</a>
 							<a class="dropdown-item" href="sayansinadini.html">Sayansi na Dini</a>
 						</div>
-					</li>
+					</li> -->
 				</ul>
+				<div class="user-items d-flex">
+					<ul class="d-flex justify-content-end list-unstyled mb-0"></ul>
+				</div>
 			</div>
+	
+			<!-- Navbar Toggler Button for Mobile -->
+			<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon " ></span>
+			</button> -->
+	
+			<!-- Library Link -->
+			<!-- <ul class="navbar-nav ml-auto">
+				<li class="nav-item library">
+					<img class="libraryimage" src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNy44MiAyNy44MiI+PGRlZnM+PHN0eWxlPi5jbHMtMSB7b3BhY2l0eTogMC45O30uY2xzLTIge29wYWNpdHk6IDAuNjt9LmNscy0zIHtvcGFjaXR5OiAwLjM7fS5jbHMtMSwuY2xzLTIsLmNscy0zIHtmaWxsOiAjM2UzOTM4O2lzb2xhdGlvbjogaXNvbGF0ZTt9PC9zdHlsZT48L2RlZnM+PGcgaWQ9IklDTl9BbGxfU2l0ZXNfIiBkYXRhLW5hbWU9IklDTiBBbGwgU2l0ZXMgIj48cmVjdCBpZD0iUmVjaHRlY2tfMTAxMSIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDExIiBjbGFzcz0iY2xzLTEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTIiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxMiIgY2xhc3M9ImNscy0xIiB4PSIxMC4wOSIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxMyIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDEzIiBjbGFzcz0iY2xzLTEiIHg9IjIwLjE3IiB3aWR0aD0iNy44NCIgaGVpZ2h0PSI3Ljc5IiAvPjxyZWN0IGlkPSJSZWNodGVja18xMDE0IiBkYXRhLW5hbWU9IlJlY2h0ZWNrIDEwMTQiIGNsYXNzPSJjbHMtMiIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTUiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNSIgY2xhc3M9ImNscy0xIiB4PSIxMC4wOSIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTYiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNiIgY2xhc3M9ImNscy0yIiB4PSIyMC4xNyIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTciIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNyIgY2xhc3M9ImNscy0zIiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxOCIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDE4IiBjbGFzcz0iY2xzLTMiIHg9IjEwLjA5IiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxOSIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDE5IiBjbGFzcz0iY2xzLTMiIHg9IjIwLjE3IiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48L2c+PC9zdmc+">
+						<a class="nav-link librarylink" href="./maktaba">Maktaba</a>
+				</li>
+
+				
+			</ul>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item bank">
+					<a class="nav-link banklink" href="./media-bank/">Picha</a>
+				</li>
+			</ul> -->
+	
+			
 		</div>
 	</nav>
-
-</header> 
+	
+</header>
 <!-- Header End -->
 
 <!-- Intro Section
@@ -140,7 +197,7 @@
 							<img src="images/portfolio/vector-flower.jpg" alt="Sakura Haruno" />
 						</div>
 						<div class="col-12 entry-title">
-							<h3><a href="forces.html">Nguvu za muungano na mmonyoko</a></h3>
+							<h3><a href="forces.html">Nguvu za muungano na mmomonyoko</a></h3>
 							<p>Roho mpya yenye uwezo mkubwa sana imeamka ulimwenguni, kutuongoza kwenye njia ya maisha yenye haki zaidi na yenye amani.
 								<a href="#" class="more-link">Zaidi <i class="icon-angle-right"></i></a>
 							</p>
@@ -233,7 +290,9 @@
 <!-- Adding support to Bootstrap-->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+crossorigin="anonymous"></script>
 
 
 

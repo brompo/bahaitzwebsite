@@ -8,7 +8,7 @@
 	<!--- Basic Page Needs
 	================================================== -->
 	<meta charset="utf-8">
-	<title>Work and Service</title>
+	<title>Kazi na Utumishi</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -22,7 +22,8 @@
 	<link rel="stylesheet" href="css/layout.css">
 
 	<!-- Adding Bootstrap 14 Apr 2024:Brian-Ceasar-->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 
 	<!--[if lt IE 9]>
@@ -40,48 +41,105 @@
 
 <!-- Header
 ================================================== -->
-<header class="mobile mobile-static">
-	<nav class="navbar navbar-expand navbar-light">
+<header id="header" class="site-header">
+    <nav id="header-nav" class="navbar navbar-expand-lg py3">
 		<div class="container">
 			<!-- Logo -->
-			<a class="navbar-brand navbar-logo" href="#"><img alt="" src="images/logo.png"></a>
+			<a class="navbar-brand navbar-logo" href="#">
+				<img alt="" src="images/logo.png" class="logo header-nav-logo"> 
+			</a>
+
+			<div class="dropdown d-lg-none order-3">
+				<button class="navbar-toggler " type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+				  <span class="navbar-toggler-icon "></span>
 	
-			<!-- Navbar Toggler Button for Mobile -->
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon " ></span>
-			</button>
-	
-			<!-- Library Link -->
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item library">
-					<img class="libraryimage" src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNy44MiAyNy44MiI+PGRlZnM+PHN0eWxlPi5jbHMtMSB7b3BhY2l0eTogMC45O30uY2xzLTIge29wYWNpdHk6IDAuNjt9LmNscy0zIHtvcGFjaXR5OiAwLjM7fS5jbHMtMSwuY2xzLTIsLmNscy0zIHtmaWxsOiAjM2UzOTM4O2lzb2xhdGlvbjogaXNvbGF0ZTt9PC9zdHlsZT48L2RlZnM+PGcgaWQ9IklDTl9BbGxfU2l0ZXNfIiBkYXRhLW5hbWU9IklDTiBBbGwgU2l0ZXMgIj48cmVjdCBpZD0iUmVjaHRlY2tfMTAxMSIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDExIiBjbGFzcz0iY2xzLTEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTIiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxMiIgY2xhc3M9ImNscy0xIiB4PSIxMC4wOSIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxMyIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDEzIiBjbGFzcz0iY2xzLTEiIHg9IjIwLjE3IiB3aWR0aD0iNy44NCIgaGVpZ2h0PSI3Ljc5IiAvPjxyZWN0IGlkPSJSZWNodGVja18xMDE0IiBkYXRhLW5hbWU9IlJlY2h0ZWNrIDEwMTQiIGNsYXNzPSJjbHMtMiIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTUiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNSIgY2xhc3M9ImNscy0xIiB4PSIxMC4wOSIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTYiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNiIgY2xhc3M9ImNscy0yIiB4PSIyMC4xNyIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTciIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNyIgY2xhc3M9ImNscy0zIiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxOCIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDE4IiBjbGFzcz0iY2xzLTMiIHg9IjEwLjA5IiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxOSIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDE5IiBjbGFzcz0iY2xzLTMiIHg9IjIwLjE3IiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48L2c+PC9zdmc+">
-						<a class="nav-link librarylink" href="./library">Maktaba</a>
-					</li>
-			</ul>
-	
+				</button>
+				
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				  <li><a class="dropdown-item" href="#intro">Mwanzoni</a></li>
+				  <li><a class="dropdown-item" href="kusudi.html">Kusudi la Maisha Yetu</a></li>
+				  <li><a class="dropdown-item" href="jumuiya.html">Kujenga Jumuiya</a></li>
+				  <li><a class="dropdown-item" href="familia.html">Maisha ya Familia</a></li>
+				  <li><a class="dropdown-item" href="sayansinadini.html">Sayansi na Dini</a></li>
+				  
+				</ul>
+			</div>
+
 			<!-- Navbar Content -->
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav ml-auto">
-					<!-- Navigation Links -->
-					<li class="nav-item dropdown" style="background: #8E673E; border-radius:10px;">
+				<ul id="navbar" class="navbar-nav text-uppercase justify-content-end flex-grow-1">
+					<li class="nav-item">
+						<a class="nav-link me-4 active" href="./">Nyumbani</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link me-4" href="./maktaba">Maktaba</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link me-4" href="./media-bank/">Picha</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link me-4 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+						  aria-expanded="true">Mada</a>
+						<ul class="dropdown-menu animate slide border">
+						  <li>
+							<a href="kusudi.html" class="dropdown-item fw-light">Kusudi la Maisha Yetu</a>
+						  </li>
+						  <li>
+							<a href="jumuiya.html" class="dropdown-item fw-light">Kujenga Jumuiya</a>
+						  </li>
+						  <li>
+							<a href="familia.html" class="dropdown-item fw-light">Maisha ya familia</a>
+						  </li>
+						  <li>
+							<a href="sayansinadini.html" class="dropdown-item fw-light">Sayansi na Dini</a>
+						  </li>
+						</ul>
+					  </li>
+
+					<!-- <li class="nav-item dropdown" style="background: #8E673E; border-radius:10px;">
 						<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<!-- Hamburger Icon -->
+							
 							<span class="navbar-toggler-icon"></span>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="index.html">Mwanzoni</a>
+							<a class="dropdown-item active" href="#intro">Mwanzoni</a>
 							<a class="dropdown-item" href="kusudi.html">Kusudi la Maisha Yetu</a>
 							<a class="dropdown-item" href="jumuiya.html">Kujenga Jumuiya</a>
-							<a class="dropdown-item active" href="#familia">Maisha ya Familia</a>
+							<a class="dropdown-item" href="familia.html">Maisha ya Familia</a>
 							<a class="dropdown-item" href="sayansinadini.html">Sayansi na Dini</a>
 						</div>
-					</li>
+					</li> -->
 				</ul>
+				<div class="user-items d-flex">
+					<ul class="d-flex justify-content-end list-unstyled mb-0"></ul>
+				</div>
 			</div>
+	
+			<!-- Navbar Toggler Button for Mobile -->
+			<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon " ></span>
+			</button> -->
+	
+			<!-- Library Link -->
+			<!-- <ul class="navbar-nav ml-auto">
+				<li class="nav-item library">
+					<img class="libraryimage" src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNy44MiAyNy44MiI+PGRlZnM+PHN0eWxlPi5jbHMtMSB7b3BhY2l0eTogMC45O30uY2xzLTIge29wYWNpdHk6IDAuNjt9LmNscy0zIHtvcGFjaXR5OiAwLjM7fS5jbHMtMSwuY2xzLTIsLmNscy0zIHtmaWxsOiAjM2UzOTM4O2lzb2xhdGlvbjogaXNvbGF0ZTt9PC9zdHlsZT48L2RlZnM+PGcgaWQ9IklDTl9BbGxfU2l0ZXNfIiBkYXRhLW5hbWU9IklDTiBBbGwgU2l0ZXMgIj48cmVjdCBpZD0iUmVjaHRlY2tfMTAxMSIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDExIiBjbGFzcz0iY2xzLTEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTIiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxMiIgY2xhc3M9ImNscy0xIiB4PSIxMC4wOSIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxMyIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDEzIiBjbGFzcz0iY2xzLTEiIHg9IjIwLjE3IiB3aWR0aD0iNy44NCIgaGVpZ2h0PSI3Ljc5IiAvPjxyZWN0IGlkPSJSZWNodGVja18xMDE0IiBkYXRhLW5hbWU9IlJlY2h0ZWNrIDEwMTQiIGNsYXNzPSJjbHMtMiIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTUiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNSIgY2xhc3M9ImNscy0xIiB4PSIxMC4wOSIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTYiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNiIgY2xhc3M9ImNscy0yIiB4PSIyMC4xNyIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTciIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNyIgY2xhc3M9ImNscy0zIiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxOCIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDE4IiBjbGFzcz0iY2xzLTMiIHg9IjEwLjA5IiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxOSIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDE5IiBjbGFzcz0iY2xzLTMiIHg9IjIwLjE3IiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48L2c+PC9zdmc+">
+						<a class="nav-link librarylink" href="./maktaba">Maktaba</a>
+				</li>
+
+				
+			</ul>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item bank">
+					<a class="nav-link banklink" href="./media-bank/">Picha</a>
+				</li>
+			</ul> -->
+	
+			
 		</div>
 	</nav>
-
-</header> 
+	
+</header>
 <!-- Header End -->
 
 	<!-- Intro Section
@@ -98,18 +156,18 @@
 <section id="portfolio">
 	<div class="container">
 		<div class="row section-head">
-			<h2>Role of youth in the society</h2>
-			<p class="intro">Baha’u’llah urged every person to learn and practice an art, trade, craft or profession for the good of themselves, their families and society as a whole. This principle, fundamental to the identity and the spiritual life of all Baha’is, calls each person to develop, train and perfect their art, craft, science or profession to the highest possible level of proficiency, beauty and service. In fact, the Baha’i writings say that work performed in the spirit of service rises to the level of prayer and worship:</p>
-			<p class="intro inlinequote">“It is enjoined upon every one of you to engage in some form of occupation, such as crafts, trades and the like. We have graciously exalted your engagement in such work to the rank of worship unto God, the True One. Ponder ye in your hearts the grace and the blessings of God and render thanks unto Him at eventide and at dawn. Waste not your time in idleness and sloth. Occupy yourselves with that which profiteth yourselves and others”. – Tablets of Baha’u’llah, p. 26.</p>
-			<p class="intro">The Baha’i teachings encourage everyone to work. Abdu’l-Baha wrote <span class="inlinequote">“Every person must have an occupation, a trade or a craft, so that he may carry other people’s burdens, and not himself be a burden to others.”</span> The Baha’is envision a future human society where universal education will train all children and where no one will have to beg, be homeless or live in abject poverty – where everyone will perform useful work, and all will contribute to the welfare of society. Baha’is believe that even the simplest and most basic work can ennoble and exalt our spiritual condition</p>
-			<p class="intro inlinequote">In the Baha’i Cause arts, sciences and all crafts are (counted as) worship. The man who makes a piece of notepaper to the best of his ability, conscientiously, concentrating all his forces on perfecting it, is giving praise to God. Briefly, all effort and exertion put forth by man from the fullness of his heart is worship, if it is prompted by the highest motives and the will to do service to humanity. This is worship: to serve mankind and to minister to the needs of the people. Service is prayer. A physician ministering to the sick, gently, tenderly, free from prejudice and believing in the solidarity of the human race, he is giving praise. – Abdu’l-Baha, Paris Talks, p. 176-177.</p>
+			<h2>Kazi na Utumishi</h2>
+			<p class="intro">Baha’u’llah alihimiza kila mtu kujifunza na kufanya kazi ya sanaa, biashara, ufundi au taaluma kwa manufaa yao wenyewe, familia zao na jamii kwa ujumla. Kanuni hii, ya msingi kwa utambulisho na maisha ya kiroho ya Wabaha’i wote, inamwita kila mtu kukuza, kufundisha na kukamilisha sanaa, ufundi, sayansi au taaluma hadi kiwango cha juu zaidi cha ustadi, urembo na huduma. Kwa hakika, maandishi ya Kibaha’i yanasema kwamba kazi inayofanywa kwa roho ya utumishi hupanda hadi kiwango cha sala na ibada:</p>
+			<p class="intro inlinequote">“Imefaradhishwa kwa kila mmoja wenu kujishughulisha na aina fulani ya kazi, kama vile ufundi, biashara na mengineyo. Hakika tumekupandisha daraja ya kujishughulisha kwenu katika kazi hiyo mpaka daraja ya kumwabudu Mwenyezi Mungu aliye wa Haki. Zitafakarini katika nyoyo zenu neema na baraka za Mwenyezi Mungu, na mshukuruni jioni na alfajiri. Usipoteze wakati wako katika uvivu na uvivu. Shikeni nafsi zenu kwa yale yanayojinufaisha nafsi zenu na wengine”. – Mbao za Baha’u’llah, uk. 26.</p>
+			<p class="intro">Mafundisho ya Kibaha’i yanahimiza kila mtu kufanya kazi. Abdul-Baha aliandika <span class="inlinequote">“Kila mtu lazima awe na kazi, biashara au ufundi, ili aweze kubeba mizigo ya watu wengine, na sio yeye mwenyewe kuwa mzigo kwa wengine.”</span> Wabaha’i wanawazia jamii ya kibinadamu ya wakati ujao ambapo elimu ya ulimwengu wote itawazoeza watoto wote na ambapo hakuna mtu atakayeomba, kukosa makao au kuishi katika umaskini uliokithiri - ambapo kila mtu atafanya kazi yenye manufaa, na wote watachangia ustawi wa jamii. Wabaha’i wanaamini kwamba hata kazi rahisi na ya msingi zaidi inaweza kutukuza na kuinua hali yetu ya kiroho</p>
+			<p class="intro inlinequote">Katika Njia ya Baha'i sanaa, sayansi na ufundi wote (huhesabiwa kama) ibada. Mtu anayetengeneza karatasi kwa kadiri ya uwezo wake wote, kwa uangalifu mkubwa, akikazia nguvu zake zote katika kuikamilisha, anamsifu Mungu. Kwa ufupi, juhudi na juhudi zote zinazotolewa na mwanadamu kutoka katika utimilifu wa moyo wake ni ibada, ikiwa inachochewa na nia ya juu kabisa na nia ya kufanya huduma kwa wanadamu. Hii ni ibada: kuwatumikia wanadamu na kuhudumia mahitaji ya watu. Huduma ni maombi. Tabibu anayehudumia wagonjwa, kwa upole, kwa upole, asiye na ubaguzi na kuamini mshikamano wa jamii ya wanadamu, anatoa sifa. – Abdu’l-Baha, Mazungumzo ya Paris, uk. 176-177.</p>
 	</div>
 	</div>
 	<!--- Quote--->
 	<div class="container quote">
 		<!-- Entry -->
 		<div class="row quotecolumn">
-			<p class="intro quote" id="mainquote">“The betterment of the world can be accomplished through pure and goodly deeds, through commendable and seemly conduct.” </p>
+			<p class="intro quote" id="mainquote">“Uboreshaji wa ulimwengu unaweza kukamilishwa kupitia matendo safi na mema, kwa njia ya tabia ya kusifiwa na inayoonekana kuwa nzuri.” </p>
 			<p class="manifestation">
 				— Bahá’u’lláh
 			</p>
@@ -149,7 +207,10 @@
 			<!-- Adding support to Bootstrap-->
 			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 			<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-			<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"></script>
+				
 	
 
 		</body>

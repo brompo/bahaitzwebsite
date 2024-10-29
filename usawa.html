@@ -8,7 +8,7 @@
    <!--- Basic Page Needs
    ================================================== -->
 	<meta charset="utf-8">
-	<title>Equality Between Men and Women</title>
+	<title>Usawa wa Mwanaume na Mwanamke</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -21,7 +21,8 @@
    <link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/layout.css">
 	<!-- Adding Bootstrap 13 Apr 2024:Brian-->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 
 	<!--[if lt IE 9]>
@@ -39,48 +40,105 @@
 
 <!-- Header
 ================================================== -->
-<header class="mobile mobile-static">
-	<nav class="navbar navbar-expand navbar-light">
+<header id="header" class="site-header">
+    <nav id="header-nav" class="navbar navbar-expand-lg py3">
 		<div class="container">
 			<!-- Logo -->
-			<a class="navbar-brand navbar-logo" href="index.html"><img alt="" src="images/logo.png"></a>
+			<a class="navbar-brand navbar-logo" href="#">
+				<img alt="" src="images/logo.png" class="logo header-nav-logo"> 
+			</a>
+
+			<div class="dropdown d-lg-none order-3">
+				<button class="navbar-toggler " type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+				  <span class="navbar-toggler-icon "></span>
 	
-			<!-- Navbar Toggler Button for Mobile -->
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon " ></span>
-			</button>
-	
-			<!-- Library Link -->
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item library">
-					<img class="libraryimage" src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNy44MiAyNy44MiI+PGRlZnM+PHN0eWxlPi5jbHMtMSB7b3BhY2l0eTogMC45O30uY2xzLTIge29wYWNpdHk6IDAuNjt9LmNscy0zIHtvcGFjaXR5OiAwLjM7fS5jbHMtMSwuY2xzLTIsLmNscy0zIHtmaWxsOiAjM2UzOTM4O2lzb2xhdGlvbjogaXNvbGF0ZTt9PC9zdHlsZT48L2RlZnM+PGcgaWQ9IklDTl9BbGxfU2l0ZXNfIiBkYXRhLW5hbWU9IklDTiBBbGwgU2l0ZXMgIj48cmVjdCBpZD0iUmVjaHRlY2tfMTAxMSIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDExIiBjbGFzcz0iY2xzLTEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTIiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxMiIgY2xhc3M9ImNscy0xIiB4PSIxMC4wOSIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxMyIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDEzIiBjbGFzcz0iY2xzLTEiIHg9IjIwLjE3IiB3aWR0aD0iNy44NCIgaGVpZ2h0PSI3Ljc5IiAvPjxyZWN0IGlkPSJSZWNodGVja18xMDE0IiBkYXRhLW5hbWU9IlJlY2h0ZWNrIDEwMTQiIGNsYXNzPSJjbHMtMiIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTUiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNSIgY2xhc3M9ImNscy0xIiB4PSIxMC4wOSIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTYiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNiIgY2xhc3M9ImNscy0yIiB4PSIyMC4xNyIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTciIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNyIgY2xhc3M9ImNscy0zIiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxOCIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDE4IiBjbGFzcz0iY2xzLTMiIHg9IjEwLjA5IiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxOSIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDE5IiBjbGFzcz0iY2xzLTMiIHg9IjIwLjE3IiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48L2c+PC9zdmc+">
-						<a class="nav-link librarylink" href="./library">Maktaba</a>
-					</li>
-			</ul>
-	
+				</button>
+				
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				  <li><a class="dropdown-item" href="#intro">Mwanzoni</a></li>
+				  <li><a class="dropdown-item" href="kusudi.html">Kusudi la Maisha Yetu</a></li>
+				  <li><a class="dropdown-item" href="jumuiya.html">Kujenga Jumuiya</a></li>
+				  <li><a class="dropdown-item" href="familia.html">Maisha ya Familia</a></li>
+				  <li><a class="dropdown-item" href="sayansinadini.html">Sayansi na Dini</a></li>
+				  
+				</ul>
+			</div>
+
 			<!-- Navbar Content -->
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav ml-auto">
-					<!-- Navigation Links -->
-					<li class="nav-item dropdown" style="background: #8E673E; border-radius:10px;">
+				<ul id="navbar" class="navbar-nav text-uppercase justify-content-end flex-grow-1">
+					<li class="nav-item">
+						<a class="nav-link me-4 active" href="./">Nyumbani</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link me-4" href="./maktaba">Maktaba</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link me-4" href="./media-bank/">Picha</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link me-4 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+						  aria-expanded="true">Mada</a>
+						<ul class="dropdown-menu animate slide border">
+						  <li>
+							<a href="kusudi.html" class="dropdown-item fw-light">Kusudi la Maisha Yetu</a>
+						  </li>
+						  <li>
+							<a href="jumuiya.html" class="dropdown-item fw-light">Kujenga Jumuiya</a>
+						  </li>
+						  <li>
+							<a href="familia.html" class="dropdown-item fw-light">Maisha ya familia</a>
+						  </li>
+						  <li>
+							<a href="sayansinadini.html" class="dropdown-item fw-light">Sayansi na Dini</a>
+						  </li>
+						</ul>
+					  </li>
+
+					<!-- <li class="nav-item dropdown" style="background: #8E673E; border-radius:10px;">
 						<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<!-- Hamburger Icon -->
+							
 							<span class="navbar-toggler-icon"></span>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="index.html">Mwanzoni</a>
+							<a class="dropdown-item active" href="#intro">Mwanzoni</a>
 							<a class="dropdown-item" href="kusudi.html">Kusudi la Maisha Yetu</a>
 							<a class="dropdown-item" href="jumuiya.html">Kujenga Jumuiya</a>
-							<a class="dropdown-item active" href="#familia">Maisha ya Familia</a>
+							<a class="dropdown-item" href="familia.html">Maisha ya Familia</a>
 							<a class="dropdown-item" href="sayansinadini.html">Sayansi na Dini</a>
 						</div>
-					</li>
+					</li> -->
 				</ul>
+				<div class="user-items d-flex">
+					<ul class="d-flex justify-content-end list-unstyled mb-0"></ul>
+				</div>
 			</div>
+	
+			<!-- Navbar Toggler Button for Mobile -->
+			<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon " ></span>
+			</button> -->
+	
+			<!-- Library Link -->
+			<!-- <ul class="navbar-nav ml-auto">
+				<li class="nav-item library">
+					<img class="libraryimage" src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNy44MiAyNy44MiI+PGRlZnM+PHN0eWxlPi5jbHMtMSB7b3BhY2l0eTogMC45O30uY2xzLTIge29wYWNpdHk6IDAuNjt9LmNscy0zIHtvcGFjaXR5OiAwLjM7fS5jbHMtMSwuY2xzLTIsLmNscy0zIHtmaWxsOiAjM2UzOTM4O2lzb2xhdGlvbjogaXNvbGF0ZTt9PC9zdHlsZT48L2RlZnM+PGcgaWQ9IklDTl9BbGxfU2l0ZXNfIiBkYXRhLW5hbWU9IklDTiBBbGwgU2l0ZXMgIj48cmVjdCBpZD0iUmVjaHRlY2tfMTAxMSIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDExIiBjbGFzcz0iY2xzLTEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTIiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxMiIgY2xhc3M9ImNscy0xIiB4PSIxMC4wOSIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxMyIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDEzIiBjbGFzcz0iY2xzLTEiIHg9IjIwLjE3IiB3aWR0aD0iNy44NCIgaGVpZ2h0PSI3Ljc5IiAvPjxyZWN0IGlkPSJSZWNodGVja18xMDE0IiBkYXRhLW5hbWU9IlJlY2h0ZWNrIDEwMTQiIGNsYXNzPSJjbHMtMiIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTUiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNSIgY2xhc3M9ImNscy0xIiB4PSIxMC4wOSIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTYiIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNiIgY2xhc3M9ImNscy0yIiB4PSIyMC4xNyIgeT0iMTAuMDEiIHdpZHRoPSI3Ljg0IiBoZWlnaHQ9IjcuNzkiIC8+PHJlY3QgaWQ9IlJlY2h0ZWNrXzEwMTciIGRhdGEtbmFtZT0iUmVjaHRlY2sgMTAxNyIgY2xhc3M9ImNscy0zIiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxOCIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDE4IiBjbGFzcz0iY2xzLTMiIHg9IjEwLjA5IiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48cmVjdCBpZD0iUmVjaHRlY2tfMTAxOSIgZGF0YS1uYW1lPSJSZWNodGVjayAxMDE5IiBjbGFzcz0iY2xzLTMiIHg9IjIwLjE3IiB5PSIyMC4wMyIgd2lkdGg9IjcuODQiIGhlaWdodD0iNy43OSIgLz48L2c+PC9zdmc+">
+						<a class="nav-link librarylink" href="./maktaba">Maktaba</a>
+				</li>
+
+				
+			</ul>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item bank">
+					<a class="nav-link banklink" href="./media-bank/">Picha</a>
+				</li>
+			</ul> -->
+	
+			
 		</div>
 	</nav>
-
-</header> <!-- Header End -->
+	
+</header>
 
    <!-- Intro Section
    ================================================== -->
@@ -97,9 +155,9 @@
 	<div class="container">
 		<div class="row section-head">
 			<h2>Usawa wa Mwanaume na Mwanamke</h2>
-			<p class="intro">One of the fundamental teachings of the Baha’i Faith  is that men and women are equal, and that equality of the sexes is a spiritual and moral standard that is essential for the unification of the planet and the unfoldment of peace. Bahá'í teachings note the importance of implementing this principle in individual, family, and community life. Nevertheless, the Bahá'í notion of the full spiritual and social equality of the two sexes does not imply sameness, so that gender distinction and differentiation are observed in certain areas of life.</p>
+			<p class="intro">Moja ya mafundisho ya kimsingi ya Imani ya Baha’i ni kwamba wanaume na wanawake ni sawa, na kwamba usawa wa jinsia ni kiwango cha kiroho na kimaadili ambacho ni muhimu kwa kuunganisha sayari na kueneza amani. Mafundisho ya Kibahá'í yanabainisha umuhimu wa kutekeleza kanuni hii katika maisha ya mtu binafsi, familia na jumuiya. Hata hivyo, dhana ya Kibaha'í ya usawa kamili wa kiroho na kijamii wa jinsia hizi mbili haimaanishi usawa, hivyo kwamba tofauti ya kijinsia na tofauti huzingatiwa katika maeneo fulani ya maisha.</p>
 
-            <p class="intro"><span class="inlinequote">“The world of humanity is possessed of two wings: the male and the female. So long as these two wings are not equivalent in strength, the bird will not fly. Until womankind reaches the same degree as man, until she enjoys the same arena of activity, extraordinary attainment for humanity will not be realized; humanity cannot wing its way to heights of real attainment. When the two wings . . . become equivalent in strength, enjoying the same prerogatives, the flight of man will be exceedingly lofty and extraordinary.” </span> ‘Abdu’l-Bahá, Promulgation, p. 375.
+            <p class="intro"><span class="inlinequote">“Ulimwengu wa wanadamu una mbawa mbili: dume na jike. Ili mradi mabawa haya mawili hayana nguvu sawa, ndege hataruka. Hadi wanadamu wafikie daraja sawa na mwanamume, hadi afurahie uwanja ule ule wa shughuli, ufikiaji wa ajabu kwa ubinadamu hautapatikana; ubinadamu hauwezi kuelekeza njia yake kwenye kilele cha kupatikana kwa kweli. Wakati mbawa mbili. . . kuwa sawa kwa nguvu, kufurahia haki sawa, kukimbia kwa mwanadamu kutakuwa juu sana na isiyo ya kawaida.” </span> ‘Abdu’l-Bahá, Promulgation, p. 375.
 			</p>
 
 		</div>
@@ -108,7 +166,7 @@
 	<div class="container quote">
 		<!-- Entry -->
 		<div class="row quotecolumn">
-			<p class="intro quote" id="mainquote"><em>“And above all other unions is that between human beings, especially when it cometh to pass in the love of God. Thus is the primal oneness made to appear; thus is laid the foundation of love in the spirit....” </em></p>
+			<p class="intro quote" id="mainquote"><em>“Na juu ya miungano mingine yote ni ile kati ya wanadamu, hasa inapotokea katika upendo wa Mungu. Hivyo ni umoja wa primal unafanywa kuonekana; ndivyo msingi wa upendo katika roho unavyowekwa....” </em></p>
 			<p class="manifestation">
 				— Bahá’u’lláh
 			</p>
@@ -148,8 +206,11 @@
    	<!-- Adding support to Bootstrap-->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+	crossorigin="anonymous"></script>
+		
+
 
 </body>
 
